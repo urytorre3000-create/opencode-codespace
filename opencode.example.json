@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "deepseek-chat",
+  "provider": {
+    "deepseek": {
+      "models": {
+        "deepseek-chat": {},
+        "deepseek-reasoner": {}
+      }
+    }
+  }
+}
