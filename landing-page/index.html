@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nova — Tu plataforma para llevar tu negocio al siguiente nivel." />
+  <title>Nova · Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">Nova<span>.</span></a>
+      <nav class="navbar__links">
+        <a href="#features">Características</a>
+        <a href="#pricing">Precios</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Iniciar sesión</a>
+        <a href="#cta" class="btn btn--primary">Empezar gratis</a>
+      </div>
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" id="mobileMenu">
+      <a href="#features">Características</a>
+      <a href="#pricing">Precios</a>
+      <a href="#testimonials">Testimonios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cta" class="btn btn--primary">Empezar gratis</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">✨ Nueva versión 2.0 disponible</span>
+        <h1>Lleva tu negocio al <span class="gradient-text">siguiente nivel</span></h1>
+        <p>
+          Nova te ayuda a gestionar, automatizar y hacer crecer tu empresa con
+          herramientas simples, rápidas y seguras. Sin fricciones. Sin complicaciones.
+        </p>
+        <div class="hero__actions">
+          <a href="#cta" class="btn btn--primary btn--lg">Comenzar ahora →</a>
+          <a href="#features" class="btn btn--outline btn--lg">Ver más</a>
+        </div>
+        <div class="hero__social">
+          <span>★★★★★</span>
+          <p>+4.800 reseñas de 5 estrellas</p>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="mockup">
+          <div class="mockup__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup__body">
+            <div class="mockup__row mockup__row--wide"></div>
+            <div class="mockup__row"></div>
+            <div class="mockup__chart">
+              <div class="bar" style="--h: 45%"></div>
+              <div class="bar" style="--h: 70%"></div>
+              <div class="bar" style="--h: 55%"></div>
+              <div class="bar" style="--h: 90%"></div>
+              <div class="bar" style="--h: 65%"></div>
+              <div class="bar" style="--h: 100%"></div>
+              <div class="bar" style="--h: 80%"></div>
+            </div>
+            <div class="mockup__row mockup__row--wide"></div>
+            <div class="mockup__row"></div>
+          </div>
+        </div>
+        <div class="floating-card floating-card--one">
+          <strong>+32%</strong>
+          <p>Crecimiento mensual</p>
+        </div>
+        <div class="floating-card floating-card--two">
+          <span class="dot"></span>
+          <p>Todo sincronizado en tiempo real</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Características -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Características</span>
+        <h2>Todo lo que necesitas, en un solo lugar</h2>
+        <p>Herramientas diseñadas para que tu equipo trabaje mejor y más rápido.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="card__icon">⚡</div>
+          <h3>Rápido y ligero</h3>
+          <p>Carga instantánea y rendimiento optimizado en cualquier dispositivo y conexión.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔒</div>
+          <h3>Seguridad total</h3>
+          <p>Cifrado de extremo a extremo y cumplimiento de las normativas más exigentes.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🤖</div>
+          <h3>Automatización</h3>
+          <p>Automatiza tareas repetitivas y ahorra horas de trabajo cada semana.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">📊</div>
+          <h3>Analíticas claras</h3>
+          <p>Informes visuales y en tiempo real para tomar mejores decisiones.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔗</div>
+          <h3>Integraciones</h3>
+          <p>Conéctate con más de 100 herramientas que ya usas a diario.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🌍</div>
+          <h3>Escalable</h3>
+          <p>Crece sin límites: nuestra infraestructura escala junto a tu negocio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección CTA intermedia -->
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <h2>¿Listo para transformar tu negocio?</h2>
+      <a href="#cta" class="btn btn--light">Solicitar una demo</a>
+    </div>
+  </section>
+
+  <!-- Precios -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Precios</span>
+        <h2>Planes para cada etapa</h2>
+        <p>Sin costos ocultos. Cancela cuando quieras.</p>
+        <div class="toggle">
+          <span>Mensual</span>
+          <label class="switch">
+            <input type="checkbox" id="billingToggle" />
+            <span class="slider"></span>
+          </label>
+          <span>Anual <em>-20%</em></span>
+        </div>
+      </div>
+      <div class="grid grid--3">
+        <article class="card card--price">
+          <h3>Básico</h3>
+          <p class="price"><span class="amount" data-monthly="0" data-yearly="0">0</span><span class="currency">€</span><span class="period">/mes</span></p>
+          <ul>
+            <li>1 proyecto</li>
+            <li>Hasta 3 usuarios</li>
+            <li>Analíticas básicas</li>
+            <li>Soporte por email</li>
+          </ul>
+          <a href="#cta" class="btn btn--outline btn--block">Elegir plan</a>
+        </article>
+        <article class="card card--price card--featured">
+          <span class="card__ribbon">Más popular</span>
+          <h3>Pro</h3>
+          <p class="price"><span class="amount" data-monthly="29" data-yearly="23">29</span><span class="currency">€</span><span class="period">/mes</span></p>
+          <ul>
+            <li>Proyectos ilimitados</li>
+            <li>Hasta 20 usuarios</li>
+            <li>Automatizaciones avanzadas</li>
+            <li>Soporte prioritario 24/7</li>
+          </ul>
+          <a href="#cta" class="btn btn--primary btn--block">Elegir plan</a>
+        </article>
+        <article class="card card--price">
+          <h3>Empresa</h3>
+          <p class="price"><span class="amount" data-monthly="99" data-yearly="79">99</span><span class="currency">€</span><span class="period">/mes</span></p>
+          <ul>
+            <li>Todo lo de Pro</li>
+            <li>Usuarios ilimitados</li>
+            <li>SSO y auditoría</li>
+            <li>Gerente de cuenta dedicado</li>
+          </ul>
+          <a href="#cta" class="btn btn--outline btn--block">Contactar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="section section--alt" id="testimonials">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Testimonios</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="grid grid--3">
+        <figure class="card testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote>"Nova transformó por completo la forma en que trabajamos. Nuestro equipo es el doble de productivo."</blockquote>
+          <figcaption>
+            <strong>María González</strong>
+            <span>CEO · Studio Creativo</span>
+          </figcaption>
+        </figure>
+        <figure class="card testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote>"La automatización nos ahorra más de 10 horas a la semana. Es increíble lo fácil que es usarla."</blockquote>
+          <figcaption>
+            <strong>Carlos Ruiz</strong>
+            <span>Fundador · TechStart</span>
+          </figcaption>
+        </figure>
+        <figure class="card testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote>"El soporte es excepcional y la plataforma es muy intuitiva. La recomiendo sin dudarlo."</blockquote>
+          <figcaption>
+            <strong>Lucía Fernández</strong>
+            <span>Directora de Operaciones · FinCorp</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <span class="section__tag">FAQ</span>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>¿Puedo cancelar mi suscripción en cualquier momento?</summary>
+          <p>Sí. Puedes cancelar o cambiar de plan en cualquier momento desde tu panel de control, sin permanencia mínima.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Ofrecen una prueba gratuita?</summary>
+          <p>El plan Básico es gratuito para siempre y el plan Pro incluye 14 días de prueba sin necesidad de tarjeta.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Mis datos están seguros?</summary>
+          <p>Absolutamente. Usamos cifrado de extremo a extremo, copias de seguridad diarias y cumplimos con el RGPD.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Puedo integrar Nova con otras herramientas?</summary>
+          <p>Contamos con más de 100 integraciones nativas y una API abierta para conectar cualquier otra herramienta.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="section cta" id="cta">
+    <div class="container cta__box">
+      <h2>Empieza hoy, es gratis</h2>
+      <p>Únete a más de 12.000 empresas que ya confían en Nova.</p>
+      <form class="cta__form" id="ctaForm">
+        <input type="email" placeholder="tu@email.com" required />
+        <button type="submit" class="btn btn--primary btn--lg">Crear cuenta</button>
+      </form>
+      <p class="cta__note" id="ctaNote"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo">Nova<span>.</span></a>
+        <p>Hecho con 💜 para equipos que quieren crecer.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <a href="#features">Características</a>
+        <a href="#pricing">Precios</a>
+        <a href="#">Integraciones</a>
+      </div>
+      <div class="footer__col">
+        <h4>Empresa</h4>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Blog</a>
+        <a href="#">Empleo</a>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Nova. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
