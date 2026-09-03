@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nova — Tu plataforma para llevar tu negocio al siguiente nivel." />
-  <title>Nova · Landing Page</title>
+  <meta name="description" content="Almas en Movimiento — Entrenamiento de calistenia guiado: dominadas, fuerza y movilidad desde cero. Sin gimnasio, sin excusas." />
+  <title>Almas en Movimiento · Calistenia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,218 +15,575 @@
   <!-- Barra de navegación -->
   <header class="navbar">
     <div class="container navbar__inner">
-      <a href="#" class="navbar__logo">Nova<span>.</span></a>
+      <a href="#" class="navbar__logo">Almas<span>en</span>Movimiento</a>
       <nav class="navbar__links">
-        <a href="#features">Características</a>
-        <a href="#pricing">Precios</a>
-        <a href="#testimonials">Testimonios</a>
+        <a href="#metodo">Método</a>
+        <a href="#plan">Plan semanal</a>
+        <a href="#rutinas">Rutinas</a>
+        <a href="#progresiones">Progresiones</a>
+        <a href="#testimonios">Historias</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="navbar__actions">
-        <a href="#" class="btn btn--ghost">Iniciar sesión</a>
-        <a href="#cta" class="btn btn--primary">Empezar gratis</a>
+        <a href="#entrena" class="btn btn--primary">Entrenar hoy</a>
       </div>
       <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="navbar__mobile" id="mobileMenu">
-      <a href="#features">Características</a>
-      <a href="#pricing">Precios</a>
-      <a href="#testimonials">Testimonios</a>
+      <a href="#metodo">Método</a>
+      <a href="#plan">Plan semanal</a>
+      <a href="#rutinas">Rutinas</a>
+      <a href="#progresiones">Progresiones</a>
+      <a href="#testimonios">Historias</a>
       <a href="#faq">FAQ</a>
-      <a href="#cta" class="btn btn--primary">Empezar gratis</a>
+      <a href="#entrena" class="btn btn--primary">Entrenar hoy</a>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
+    <div class="hero__grip"></div>
     <div class="container hero__inner">
       <div class="hero__content">
-        <span class="badge">✨ Nueva versión 2.0 disponible</span>
-        <h1>Lleva tu negocio al <span class="gradient-text">siguiente nivel</span></h1>
+        <span class="badge">🔥 Tu primera dominada empieza aquí</span>
+        <h1>Domina tu cuerpo.<br /><span class="gradient-text">Despierta tu fuerza.</span></h1>
         <p>
-          Nova te ayuda a gestionar, automatizar y hacer crecer tu empresa con
-          herramientas simples, rápidas y seguras. Sin fricciones. Sin complicaciones.
+          Calistenia progresiva y guiada, sin gimnasio y sin excusas. Construye
+          fuerza real, movilidad y control con un plan adaptado a tu nivel.
         </p>
         <div class="hero__actions">
-          <a href="#cta" class="btn btn--primary btn--lg">Comenzar ahora →</a>
-          <a href="#features" class="btn btn--outline btn--lg">Ver más</a>
+          <a href="#entrena" class="btn btn--primary btn--lg">Empezar gratis →</a>
+          <a href="#metodo" class="btn btn--outline btn--lg">Conocer el método</a>
         </div>
-        <div class="hero__social">
-          <span>★★★★★</span>
-          <p>+4.800 reseñas de 5 estrellas</p>
+        <div class="hero__stats">
+          <div class="stat">
+            <strong>100%</strong>
+            <p>Entrenamiento libre</p>
+          </div>
+          <div class="stat">
+            <strong>0€</strong>
+            <p>Sin gimnasio ni material</p>
+          </div>
+          <div class="stat">
+            <strong>+1000</strong>
+            <p>Almas en movimiento</p>
+          </div>
         </div>
       </div>
       <div class="hero__visual">
-        <div class="mockup">
-          <div class="mockup__bar">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="mockup__body">
-            <div class="mockup__row mockup__row--wide"></div>
-            <div class="mockup__row"></div>
-            <div class="mockup__chart">
-              <div class="bar" style="--h: 45%"></div>
-              <div class="bar" style="--h: 70%"></div>
-              <div class="bar" style="--h: 55%"></div>
-              <div class="bar" style="--h: 90%"></div>
-              <div class="bar" style="--h: 65%"></div>
-              <div class="bar" style="--h: 100%"></div>
-              <div class="bar" style="--h: 80%"></div>
-            </div>
-            <div class="mockup__row mockup__row--wide"></div>
-            <div class="mockup__row"></div>
-          </div>
+        <div class="ring ring--outer"></div>
+        <div class="ring ring--inner"></div>
+        <div class="bar bar--target">🏋️</div>
+        <div class="chalk">
+          <span class="chalk__label">Primera dominada</span>
+          <span class="chalk__bar"><i style="--w: 65%"></i></span>
         </div>
-        <div class="floating-card floating-card--one">
-          <strong>+32%</strong>
-          <p>Crecimiento mensual</p>
-        </div>
-        <div class="floating-card floating-card--two">
-          <span class="dot"></span>
-          <p>Todo sincronizado en tiempo real</p>
+        <div class="chalk chalk--two">
+          <span class="chalk__label">Fuerza · 3 meses</span>
+          <span class="chalk__bar"><i style="--w: 40%"></i></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Características -->
-  <section class="section" id="features">
+  <!-- Método -->
+  <section class="section" id="metodo">
     <div class="container">
       <div class="section__head">
-        <span class="section__tag">Características</span>
-        <h2>Todo lo que necesitas, en un solo lugar</h2>
-        <p>Herramientas diseñadas para que tu equipo trabaje mejor y más rápido.</p>
+        <span class="section__tag">El método</span>
+        <h2>Progresión seria, sin atajos</h2>
+        <p>Cada nivel tiene su paso siguiente. Así se llega lejos sin lesionarse.</p>
       </div>
       <div class="grid grid--3">
         <article class="card">
-          <div class="card__icon">⚡</div>
-          <h3>Rápido y ligero</h3>
-          <p>Carga instantánea y rendimiento optimizado en cualquier dispositivo y conexión.</p>
+          <div class="card__num">01</div>
+          <h3>Evalúa tu punto de partida</h3>
+          <p>Medimos fuerza, movilidad y técnica actual con pruebas sencillas. Sin ego: se empieza donde toca.</p>
         </article>
         <article class="card">
-          <div class="card__icon">🔒</div>
-          <h3>Seguridad total</h3>
-          <p>Cifrado de extremo a extremo y cumplimiento de las normativas más exigentes.</p>
+          <div class="card__num">02</div>
+          <h3>Sigue tu progresión exacta</h3>
+          <p>Cada ejercicio tiene una versión más fácil y otra más difícil. Siempre sabes cuál es tu siguiente reto.</p>
         </article>
         <article class="card">
-          <div class="card__icon">🤖</div>
-          <h3>Automatización</h3>
-          <p>Automatiza tareas repetitivas y ahorra horas de trabajo cada semana.</p>
+          <div class="card__num">03</div>
+          <h3>Descansa y reconstruye</h3>
+          <p>La fuerza se hace en el descanso. Planificamos volumen y recuperación para crecer sin estancarte.</p>
         </article>
         <article class="card">
-          <div class="card__icon">📊</div>
-          <h3>Analíticas claras</h3>
-          <p>Informes visuales y en tiempo real para tomar mejores decisiones.</p>
+          <div class="card__num">04</div>
+          <h3>Mide tu avance</h3>
+          <p>Más repeticiones, mejor técnica, nuevas marcas. Registramos cada sesión para que veas el progreso real.</p>
         </article>
         <article class="card">
-          <div class="card__icon">🔗</div>
-          <h3>Integraciones</h3>
-          <p>Conéctate con más de 100 herramientas que ya usas a diario.</p>
+          <div class="card__num">05</div>
+          <h3>Domina tu cuerpo</h3>
+          <p>De las dominadas al pino, al muscle-up y más. El cuerpo es el gimnasio y tú el arquitecto.</p>
         </article>
         <article class="card">
-          <div class="card__icon">🌍</div>
-          <h3>Escalable</h3>
-          <p>Crece sin límites: nuestra infraestructura escala junto a tu negocio.</p>
+          <div class="card__num">06</div>
+          <h3>Mueve tu alma</h3>
+          <p>Entrenar es meditación en movimiento. Fuerza mental, disciplina y confianza que se llevan a la vida.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Sección CTA intermedia -->
+  <!-- Banda CTA -->
   <section class="cta-band">
     <div class="container cta-band__inner">
-      <h2>¿Listo para transformar tu negocio?</h2>
-      <a href="#cta" class="btn btn--light">Solicitar una demo</a>
+      <h2>No se trata de estar fuerte.<br />Se trata de <span class="gradient-text">moverte con propósito</span>.</h2>
+      <a href="#entrena" class="btn btn--light">Únete gratis</a>
     </div>
   </section>
 
-  <!-- Precios -->
-  <section class="section" id="pricing">
+  <!-- Plan semanal -->
+  <section class="section section--alt" id="plan">
     <div class="container">
       <div class="section__head">
-        <span class="section__tag">Precios</span>
-        <h2>Planes para cada etapa</h2>
-        <p>Sin costos ocultos. Cancela cuando quieras.</p>
-        <div class="toggle">
-          <span>Mensual</span>
-          <label class="switch">
-            <input type="checkbox" id="billingToggle" />
-            <span class="slider"></span>
-          </label>
-          <span>Anual <em>-20%</em></span>
+        <span class="section__tag">Tu semana</span>
+        <h2>3 días. 30 minutos. Sin excusas.</h2>
+        <p>Una rotación que respeta la recuperación de cada grupo muscular.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card card--day">
+          <span class="card__day">Día A</span>
+          <h3>Empuje</h3>
+          <ul>
+            <li>Flexiones · 4 series</li>
+            <li>Fondos en banco · 3 series</li>
+            <li>Pike push-up · 3 series</li>
+            <li>Plancha · 3×30s</li>
+          </ul>
+        </article>
+        <article class="card card--day">
+          <span class="card__day">Día B</span>
+          <h3>Tracción</h3>
+          <ul>
+            <li>Dominadas australianas · 4 series</li>
+            <li>Dominadas con banda · 3 series</li>
+            <li>Remo invertido · 3 series</li>
+            <li>Colgado activo · 3×20s</li>
+          </ul>
+        </article>
+        <article class="card card--day">
+          <span class="card__day">Día C</span>
+          <h3>Pierna + Core</h3>
+          <ul>
+            <li>Sentadillas · 4 series</li>
+            <li>Zancadas · 3 series</li>
+            <li>Puente a una pierna · 3 series</li>
+            <li>Hollow body · 3×20s</li>
+          </ul>
+        </article>
+      </div>
+      <div class="plan__note">
+        <p>⚡ Cada bloque incluye calentamiento y estiramientos. Empieza a tu ritmo y sube 1–2 repeticiones cuando domines la técnica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rutinas por día -->
+  <section class="section" id="rutinas">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Rutinas día a día</span>
+        <h2>Tu semana, explicada paso a paso</h2>
+        <p>Abre cada día y encuentra la rutina completa: calentamiento, técnica, series y estiramientos. Nivel principiante — y al final, cómo progresar.</p>
+      </div>
+
+      <div class="semana">
+
+        <div class="semana__grid" role="tablist" aria-label="Días de la semana">
+          <button class="semana__tab" data-dia="lunes" role="tab" aria-selected="true">Lun</button>
+          <button class="semana__tab" data-dia="martes" role="tab" aria-selected="false">Mar</button>
+          <button class="semana__tab" data-dia="miercoles" role="tab" aria-selected="false">Mié</button>
+          <button class="semana__tab" data-dia="jueves" role="tab" aria-selected="false">Jue</button>
+          <button class="semana__tab" data-dia="viernes" role="tab" aria-selected="false">Vie</button>
+          <button class="semana__tab" data-dia="sabado" role="tab" aria-selected="false">Sáb</button>
+          <button class="semana__tab" data-dia="domingo" role="tab" aria-selected="false">Dom</button>
+        </div>
+
+        <!-- LUNES -->
+        <article class="rutina is-active" id="dia-lunes" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day">Día A · Lunes</span>
+            <h3>💪 Empuje — Fuerza de empuje horizontal y vertical</h3>
+            <p class="rutina__meta">~30 min · Nivel principiante · Descanso entre series: 60 s</p>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>🔥 Calentamiento <em>(5–8 min)</em></h4>
+            <ol>
+              <li><strong>Círculos de hombros</strong> — 15 hacia delante + 15 atrás. Abre la articulación antes de empujar.</li>
+              <li><strong>Movilidad de muñecas</strong> — flexión/extensión y círculos, 30 s. Tus muñecas sostienen todo el peso.</li>
+              <li><strong>Flexiones en pared</strong> — 10 lentas. Activan pectoral y tríceps sin cargar.</li>
+              <li><strong>Saltos de tijera o marcha en el sitio</strong> — 60 s para subir pulsaciones.</li>
+            </ol>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>💪 Entrenamiento principal</h4>
+            <ul class="rutina__ejercicios">
+              <li>
+                <span class="ej">
+                  <strong>Flexiones en pared</strong>
+                  <em>4 × 8–12 · descanso 60 s</em>
+                </span>
+                <p>Técnica: de pie frente a la pared, manos a la altura de los hombros. Flexiona los codos llevando el pecho a la pared, mantén el cuerpo recto de cabeza a pies. Inhala al bajar, exhala al empujar.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Flexiones de rodillas</strong>
+                  <em>3 × 6–10 · descanso 60 s</em>
+                </span>
+                <p>Técnica: apoyo en rodillas, manos algo más anchas que los hombros, espalda neutra. Baja el pecho casi hasta el suelo y empuja. Si sientes dolor de muñeca, apoya sobre los puños o mancuernas.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Fondos en banco (tríceps)</strong>
+                  <em>3 × 8–12 · descanso 60 s</em>
+                </span>
+                <p>Técnica: manos en el borde de una silla/banco, piernas extendidas. Baja flexionando codos a 90° sin separarlos del cuerpo; sube hasta estirar sin bloquear. Los codos apuntan atrás, no a los lados.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Plancha sobre rodillas</strong>
+                  <em>3 × 20–30 s · descanso 45 s</em>
+                </span>
+                <p>Técnica: antebrazos en el suelo, cuerpo alineado, glúteo y abdomen activados. No hundas ni levantes la cadera; respira de forma continua.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rutina__bloque rutina__foco">
+            <h4>🎯 Foco del día: <em>hacia tu primera dominada</em></h4>
+            <p>Hoy no toca traccionar fuerte, pero activamos la espalda para prepararla:</p>
+            <ul>
+              <li><strong>Encogimientos en barra (scapular pull-ups)</strong> — 3 × 10: cuélgate y baja los omóplatos sin doblar codos. Es el "encendido" de tu espalda.</li>
+              <li><strong>Colgado activo</strong> — 3 × 15–20 s: hombros alejados de las orejas, cuerpo tenso.</li>
+            </ul>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>🧘 Enfriamiento y estiramientos <em>(5 min)</em></h4>
+            <ul>
+              <li>Estiramiento de pectoral en marco de puerta — 30 s por lado.</li>
+              <li>Estiramiento de tríceps detrás de la cabeza — 30 s por lado.</li>
+              <li>Flexión de muñecas — 20 s por lado.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MARTES -->
+        <article class="rutina" id="dia-martes" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day rutina__descanso">Descanso activo</span>
+            <h3>🚶 Martes — Recuperación activa</h3>
+            <p class="rutina__meta">15–20 min · Ligero · El músculo crece descansando</p>
+          </div>
+          <div class="rutina__bloque">
+            <h4>👟 Qué hacer hoy</h4>
+            <ul>
+              <li><strong>Camina 20–30 min</strong> al aire libre, a ritmo tranquilo.</li>
+              <li><strong>Movilidad de hombros y caderas</strong> — 10 min con círculos, balanceos y sentadilla profunda sostenida (30 s).</li>
+              <li><strong>Estiramiento suave</strong> de la espalda (postura del niño, 1 min).</li>
+            </ul>
+            <p>Evita el entrenamiento intenso: tus músculos de empuje se están reparando. Mañana atacamos tracción con energía.</p>
+          </div>
+        </article>
+
+        <!-- MIÉRCOLES -->
+        <article class="rutina" id="dia-miercoles" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day">Día B · Miércoles</span>
+            <h3>🏋️ Tracción — Construye tu primera dominada</h3>
+            <p class="rutina__meta">~30 min · Nivel principiante · Descanso entre series: 75 s</p>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>🔥 Calentamiento <em>(5–8 min)</em></h4>
+            <ol>
+              <li><strong>Rotaciones de cuello y hombros</strong> — 1 min, suaves.</li>
+              <li><strong>Movilidad de muñecas y codos</strong> — 30 s.</li>
+              <li><strong>Colgado de barra 15 s</strong> (o agarre en mesa si no hay barra) para descomprimir la espalda.</li>
+              <li><strong>Mountain climbers o marcha en el sitio</strong> — 60 s.</li>
+            </ol>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>💪 Entrenamiento principal</h4>
+            <ul class="rutina__ejercicios">
+              <li>
+                <span class="ej">
+                  <strong>Dominada australiana (agarre ancho)</strong>
+                  <em>4 × 8–12 · descanso 75 s</em>
+                </span>
+                <p>Técnica: cuélgate debajo de una barra baja o mesa firme, cuerpo recto, talones en el suelo. Tira del pecho hacia la barra juntando los omóplatos. Baja lento (2–3 s). Cuanto más vertical el cuerpo, más fácil; cuanto más horizontal, más difícil.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Dominada australiana (agarre supino)</strong>
+                  <em>3 × 8–12 · descanso 75 s</em>
+                </span>
+                <p>Técnica: igual pero con palmas mirando hacia ti. Activa más bíceps y da variedad al agarre. Termina cada repetición con los brazos estirados.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Remo con toalla en puerta</strong>
+                  <em>3 × 8–12 · descanso 60 s</em>
+                </span>
+                <p>Técnica: enrolla una toalla sobre el pomo de una puerta firme, sujeta un extremo con cada mano e inclínate hacia atrás. Tira del pecho hacia la puerta manteniendo el cuerpo recto. Alternativa sin barra y muy segura.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Encogimientos en barra (scapular pull-ups)</strong>
+                  <em>3 × 10–15 · descanso 45 s</em>
+                </span>
+                <p>Técnica: colgado, baja los omóplatos hacia la cadera sin flexionar los codos, aguanta 1 s y vuelve. Aprende a "encender" la espalda antes de tirar.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rutina__bloque rutina__foco">
+            <h4>🎯 Foco del día: <em>primera dominada</em></h4>
+            <ul>
+              <li><strong>Negativas lentas</strong> — 3 × 3–5: súbete con un salto o banco a la posición final de dominada y baja en 5 s contados. Es el ejercicio que más acelera tu primera dominada.</li>
+              <li><strong>Dominada con banda elástica</strong> (si tienes) — 3 × 5: la banda te asiste justo en la parte más difícil.</li>
+            </ul>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>🧘 Enfriamiento y estiramientos <em>(5 min)</em></h4>
+            <ul>
+              <li>Colgado pasivo de barra 30 s para estirar dorsales.</li>
+              <li>Estiramiento de bíceps (brazo estirado, palma atrás) — 30 s por lado.</li>
+              <li>Postura del niño — 1 min.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- JUEVES -->
+        <article class="rutina" id="dia-jueves" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day rutina__descanso">Descanso activo</span>
+            <h3>🧘 Jueves — Movilidad y core suave</h3>
+            <p class="rutina__meta">15–20 min · Ligero · Prepara tus caderas para el día C</p>
+          </div>
+          <div class="rutina__bloque">
+            <h4>👟 Qué hacer hoy</h4>
+            <ul>
+              <li><strong>Sentadilla profunda sostenida</strong> — 3 × 30 s. Agárrate a algo si pierdes el equilibrio; abre bien las caderas.</li>
+              <li><strong>Balanceos de pierna</strong> — 10 por pierna y dirección (frontal y lateral).</li>
+              <li><strong>Rotaciones de cadera en círculo</strong> — 10 por lado.</li>
+              <li><strong>Puente de glúteo</strong> — 2 × 15 suaves para despertar el glúteo.</li>
+              <li><strong>Estiramiento de cuádriceps</strong> — 30 s por pierna.</li>
+            </ul>
+            <p>Mañana toca pierna y core: hoy solo movilizamos para llegar fresco.</p>
+          </div>
+        </article>
+
+        <!-- VIERNES -->
+        <article class="rutina" id="dia-viernes" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day">Día C · Viernes</span>
+            <h3>🦵 Pierna + Core — Base de todo</h3>
+            <p class="rutina__meta">~30 min · Nivel principiante · Descanso entre series: 60 s</p>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>🔥 Calentamiento <em>(5–8 min)</em></h4>
+            <ol>
+              <li><strong>Círculos de cadera y rodillas</strong> — 1 min en total.</li>
+              <li><strong>Sentadillas de movilidad (sin peso)</strong> — 10 lentas.</li>
+              <li><strong>Zancadas al aire caminando</strong> — 6 por pierna.</li>
+              <li><strong>Elevaciones de rodillas en el sitio</strong> — 60 s.</li>
+            </ol>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>💪 Entrenamiento principal</h4>
+            <ul class="rutina__ejercicios">
+              <li>
+                <span class="ej">
+                  <strong>Sentadilla con peso corporal</strong>
+                  <em>4 × 12–20 · descanso 60 s</em>
+                </span>
+                <p>Técnica: pies algo más anchos que los hombros, puntas ligeramente hacia fuera. Baja como si fueras a sentarte, pecho arriba, rodillas siguiendo la dirección de los pies. Baja hasta donde tu espalda se mantenga neutra.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Zancadas alternas</strong>
+                  <em>3 × 8–10 por pierna · descanso 60 s</em>
+                </span>
+                <p>Técnica: paso largo al frente y baja hasta que ambas rodillas formen ~90°. La rodilla trasera casi toca el suelo. Mantén el torso erguido; usa una pared de apoyo al principio si te cuesta el equilibrio.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Puente de glúteo</strong>
+                  <em>3 × 12–15 · descanso 45 s</em>
+                </span>
+                <p>Técnica: tumbado, rodillas flexionadas, pies en el suelo. Eleva la cadera apretando el glúteo 1 s arriba sin arquear la espalda baja. Baja controlado.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Plancha frontal</strong>
+                  <em>3 × 20–40 s · descanso 45 s</em>
+                </span>
+                <p>Técnica: antebrazos en el suelo, cuerpo en línea recta, abdomen y glúteo activos. Si la cadera baja, termina la serie antes: mejor 20 s perfectos que 40 s hundidos.</p>
+              </li>
+              <li>
+                <span class="ej">
+                  <strong>Elevaciones de pierna tumbado</strong>
+                  <em>3 × 10–15 · descanso 45 s</em>
+                </span>
+                <p>Técnica: tumbado boca arriba, piernas estiradas. Sube y baja sin tocar el suelo, con la espalda baja pegada al piso. Si se separa la zona lumbar, flexiona un poco las rodillas.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rutina__bloque rutina__foco">
+            <h4>🎯 Foco del día: <em>core para tu dominada</em></h4>
+            <ul>
+              <li><strong>Hollow body hold</strong> — 3 × 15–25 s: tumbado, brazos y piernas elevados, espalda baja pegada al suelo. Es el core que mantiene tu cuerpo firme colgado de la barra.</li>
+            </ul>
+          </div>
+
+          <div class="rutina__bloque">
+            <h4>🧘 Enfriamiento y estiramientos <em>(5 min)</em></h4>
+            <ul>
+              <li>Estiramiento de cuádriceps de pie — 30 s por pierna.</li>
+              <li>Estiramiento de isquios (pierna estirada sobre una silla) — 30 s por pierna.</li>
+              <li>Estiramiento de gemelos contra la pared — 30 s por pierna.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- SÁBADO -->
+        <article class="rutina" id="dia-sabado" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day rutina__descanso">Descanso activo</span>
+            <h3>🚶 Sábado — Juego y movimiento libre</h3>
+            <p class="rutina__meta">20–30 min · Ligero · Muévete porque te apetece</p>
+          </div>
+          <div class="rutina__bloque">
+            <h4>👟 Qué hacer hoy</h4>
+            <ul>
+              <li><strong>Camina, corre suave o monta en bici</strong> — 20–30 min.</li>
+              <li><strong>Juega con el equilibrio</strong>: pino en pared si ya te atreves, o apoyo en una pierna con ojos cerrados.</li>
+              <li><strong>Estiramiento global</strong> — 10 min tocando todas las zonas trabajadas en la semana.</li>
+            </ul>
+            <p>Sin presión. El sábado es para recordar que moverse es un placer, no solo un entrenamiento.</p>
+          </div>
+        </article>
+
+        <!-- DOMINGO -->
+        <article class="rutina" id="dia-domingo" role="tabpanel">
+          <div class="rutina__head">
+            <span class="card__day rutina__descanso">Descanso total</span>
+            <h3>😴 Domingo — Recuperación completa</h3>
+            <p class="rutina__meta">Descansa · Duerme bien · Vuelve a empezar el lunes</p>
+          </div>
+          <div class="rutina__bloque">
+            <h4>💤 Qué hacer hoy</h4>
+            <ul>
+              <li><strong>Descansa.</strong> Sin entrenamiento de fuerza: el músculo se repara y crece mientras duermes.</li>
+              <li><strong>Duerme 7–9 h</strong> e hidrátate bien durante el día.</li>
+              <li><strong>Comida rica en proteína</strong> en las comidas principales para alimentar la recuperación.</li>
+              <li>Si te apetece, un paseo suave de 15 min no hace daño. Nada más.</li>
+            </ul>
+            <p>El lunes empieza una nueva semana. Revisa tu técnica en el espejo y sube 1–2 repeticiones en los ejercicios que dominaste.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="plan__note">
+        <p>⚡ <strong>¿Cómo progresar?</strong> Cuando completes un ejercicio con la mejor técnica y sin llegar al fallo dos semanas seguidas, sube 1–2 repeticiones. Cuando domines todas las series, pasa a la siguiente progresión (ver abajo). Respeta siempre 48 h antes de repetir empuje o tracción.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progresiones -->
+  <section class="section" id="progresiones">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Progresiones</span>
+        <h2>De cero a dominada (y más allá)</h2>
+        <p>El camino de cada habilidad, paso a paso y con técnica segura.</p>
+      </div>
+      <div class="ladder">
+        <div class="ladder__row ladder__row--head">
+          <span>Habilidad</span>
+          <span>Tu camino</span>
+          <span>Meta</span>
+        </div>
+        <div class="ladder__row">
+          <strong>Dominada</strong>
+          <p>Australiana → banda → negativa → dominada</p>
+          <span class="ladder__tag">Dominada limpia</span>
+        </div>
+        <div class="ladder__row">
+          <strong>Flexión</strong>
+          <p>Pared → rodillas → completa → archer</p>
+          <span class="ladder__tag">Flexión profunda</span>
+        </div>
+        <div class="ladder__row">
+          <strong>Fondos</strong>
+          <p>Banco → paralelas → lastrados → anillas</p>
+          <span class="ladder__tag">Ring dips</span>
+        </div>
+        <div class="ladder__row">
+          <strong>Sentadilla</strong>
+          <p>Sentadilla → pistola asistida → pistola</p>
+          <span class="ladder__tag">Pistol squat</span>
+        </div>
+        <div class="ladder__row">
+          <strong>Core</strong>
+          <p>Plancha → hollow → L-sit → dragon flag</p>
+          <span class="ladder__tag">Dragon flag</span>
+        </div>
+        <div class="ladder__row">
+          <strong>Pino</strong>
+          <p>Pino en pared → libre → press handstand</p>
+          <span class="ladder__tag">Handstand libre</span>
         </div>
       </div>
-      <div class="grid grid--3">
-        <article class="card card--price">
-          <h3>Básico</h3>
-          <p class="price"><span class="amount" data-monthly="0" data-yearly="0">0</span><span class="currency">€</span><span class="period">/mes</span></p>
-          <ul>
-            <li>1 proyecto</li>
-            <li>Hasta 3 usuarios</li>
-            <li>Analíticas básicas</li>
-            <li>Soporte por email</li>
-          </ul>
-          <a href="#cta" class="btn btn--outline btn--block">Elegir plan</a>
-        </article>
-        <article class="card card--price card--featured">
-          <span class="card__ribbon">Más popular</span>
-          <h3>Pro</h3>
-          <p class="price"><span class="amount" data-monthly="29" data-yearly="23">29</span><span class="currency">€</span><span class="period">/mes</span></p>
-          <ul>
-            <li>Proyectos ilimitados</li>
-            <li>Hasta 20 usuarios</li>
-            <li>Automatizaciones avanzadas</li>
-            <li>Soporte prioritario 24/7</li>
-          </ul>
-          <a href="#cta" class="btn btn--primary btn--block">Elegir plan</a>
-        </article>
-        <article class="card card--price">
-          <h3>Empresa</h3>
-          <p class="price"><span class="amount" data-monthly="99" data-yearly="79">99</span><span class="currency">€</span><span class="period">/mes</span></p>
-          <ul>
-            <li>Todo lo de Pro</li>
-            <li>Usuarios ilimitados</li>
-            <li>SSO y auditoría</li>
-            <li>Gerente de cuenta dedicado</li>
-          </ul>
-          <a href="#cta" class="btn btn--outline btn--block">Contactar</a>
-        </article>
-      </div>
     </div>
   </section>
 
-  <!-- Testimonios -->
-  <section class="section section--alt" id="testimonials">
+  <!-- Historias / testimonios -->
+  <section class="section section--alt" id="testimonios">
     <div class="container">
       <div class="section__head">
-        <span class="section__tag">Testimonios</span>
-        <h2>Lo que dicen nuestros clientes</h2>
+        <span class="section__tag">Historias</span>
+        <h2>Almas que ya están en movimiento</h2>
       </div>
       <div class="grid grid--3">
         <figure class="card testimonial">
           <div class="testimonial__stars">★★★★★</div>
-          <blockquote>"Nova transformó por completo la forma en que trabajamos. Nuestro equipo es el doble de productivo."</blockquote>
+          <blockquote>"En 4 meses logré mi primera dominada. Pensé que nunca lo conseguiría y hoy hago series de 8."</blockquote>
           <figcaption>
-            <strong>María González</strong>
-            <span>CEO · Studio Creativo</span>
+            <strong>María G.</strong>
+            <span>Empezó desde cero · 6 meses</span>
           </figcaption>
         </figure>
         <figure class="card testimonial">
           <div class="testimonial__stars">★★★★★</div>
-          <blockquote>"La automatización nos ahorra más de 10 horas a la semana. Es increíble lo fácil que es usarla."</blockquote>
+          <blockquote>"Sin gimnasio y en mi casa. Las progresiones claras hicieron todo el trabajo más fácil de seguir."</blockquote>
           <figcaption>
-            <strong>Carlos Ruiz</strong>
-            <span>Fundador · TechStart</span>
+            <strong>Carlos R.</strong>
+            <span>Objetivo: dominada y pino</span>
           </figcaption>
         </figure>
         <figure class="card testimonial">
           <div class="testimonial__stars">★★★★★</div>
-          <blockquote>"El soporte es excepcional y la plataforma es muy intuitiva. La recomiendo sin dudarlo."</blockquote>
+          <blockquote>"Lo que más valoro es la técnica: aprendí a entrenar sin dolor y viendo resultados reales cada semana."</blockquote>
           <figcaption>
-            <strong>Lucía Fernández</strong>
-            <span>Directora de Operaciones · FinCorp</span>
+            <strong>Lucía F.</strong>
+            <span>De flexiones a anillas</span>
           </figcaption>
         </figure>
       </div>
@@ -242,33 +599,38 @@
       </div>
       <div class="faq">
         <details class="faq__item">
-          <summary>¿Puedo cancelar mi suscripción en cualquier momento?</summary>
-          <p>Sí. Puedes cancelar o cambiar de plan en cualquier momento desde tu panel de control, sin permanencia mínima.</p>
+          <summary>¿Necesito material o ir al gimnasio?</summary>
+          <p>No. Trabajamos con tu peso corporal. Una barra de dominadas (o un lugar donde colgarte) es opcional y recomendable cuando llegue el momento.</p>
         </details>
         <details class="faq__item">
-          <summary>¿Ofrecen una prueba gratuita?</summary>
-          <p>El plan Básico es gratuito para siempre y el plan Pro incluye 14 días de prueba sin necesidad de tarjeta.</p>
+          <summary>Nunca he entrenado. ¿Puedo empezar?</summary>
+          <p>Claro. Empezamos desde tu nivel real con regresiones seguras. Si puedes caminar, puedes entrenar; adaptamos cada ejercicio.</p>
         </details>
         <details class="faq__item">
-          <summary>¿Mis datos están seguros?</summary>
-          <p>Absolutamente. Usamos cifrado de extremo a extremo, copias de seguridad diarias y cumplimos con el RGPD.</p>
+          <summary>¿Es realmente gratis?</summary>
+          <p>Sí. El plan base es 100% gratuito y sin permanencia: calentamiento, rutina diaria, progresiones y registro de avances.</p>
         </details>
         <details class="faq__item">
-          <summary>¿Puedo integrar Nova con otras herramientas?</summary>
-          <p>Contamos con más de 100 integraciones nativas y una API abierta para conectar cualquier otra herramienta.</p>
+          <summary>¿Cuánto tardo en ver resultados?</summary>
+          <p>Con constancia (3 días a la semana) notas fuerza y control en 4–6 semanas. Tu primera dominada suele llegar entre los 3 y 6 meses.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Y si tengo dolor o molestias?</summary>
+          <p>El dolor agudo no se entrena: se escucha. Ajustamos el plan o buscamos variantes, y ante molestias persistentes consulta a un profesional.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- CTA final -->
-  <section class="section cta" id="cta">
+  <section class="section cta" id="entrena">
     <div class="container cta__box">
-      <h2>Empieza hoy, es gratis</h2>
-      <p>Únete a más de 12.000 empresas que ya confían en Nova.</p>
+      <span class="badge">🔥 Hoy es un buen día</span>
+      <h2>Tu cuerpo ya está listo.<br />Solo falta <span class="gradient-text">empezar</span>.</h2>
+      <p>Déjanos tu correo y recibe cada mañana tu plan del día, gratis.</p>
       <form class="cta__form" id="ctaForm">
         <input type="email" placeholder="tu@email.com" required />
-        <button type="submit" class="btn btn--primary btn--lg">Crear cuenta</button>
+        <button type="submit" class="btn btn--primary btn--lg">Quiero mi plan</button>
       </form>
       <p class="cta__note" id="ctaNote"></p>
     </div>
@@ -278,30 +640,30 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="navbar__logo">Nova<span>.</span></a>
-        <p>Hecho con 💜 para equipos que quieren crecer.</p>
+        <a href="#" class="navbar__logo">Almas<span>en</span>Movimiento</a>
+        <p>Hecho con 💛 para los que entrenan con el alma.</p>
       </div>
       <div class="footer__col">
-        <h4>Producto</h4>
-        <a href="#features">Características</a>
-        <a href="#pricing">Precios</a>
-        <a href="#">Integraciones</a>
+        <h4>Entrena</h4>
+        <a href="#metodo">Método</a>
+        <a href="#plan">Plan semanal</a>
+        <a href="#progresiones">Progresiones</a>
       </div>
       <div class="footer__col">
-        <h4>Empresa</h4>
-        <a href="#">Sobre nosotros</a>
-        <a href="#">Blog</a>
-        <a href="#">Empleo</a>
+        <h4>Comunidad</h4>
+        <a href="#testimonios">Historias</a>
+        <a href="#faq">FAQ</a>
+        <a href="#entrena">Empezar</a>
       </div>
       <div class="footer__col">
         <h4>Legal</h4>
         <a href="#">Privacidad</a>
         <a href="#">Términos</a>
-        <a href="#">Cookies</a>
+        <a href="#">Aviso de salud</a>
       </div>
     </div>
     <div class="container footer__bottom">
-      <p>© 2026 Nova. Todos los derechos reservados.</p>
+      <p>© 2026 Almas en Movimiento. Todos los derechos reservados.</p>
     </div>
   </footer>
 
