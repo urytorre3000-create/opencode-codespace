@@ -20,6 +20,7 @@
         <a href="#metodo">Método</a>
         <a href="#plan">Plan semanal</a>
         <a href="#rutinas">Rutinas</a>
+        <a href="#plan-hoy">Plan del día</a>
         <a href="#progresiones">Progresiones</a>
         <a href="#testimonios">Historias</a>
         <a href="#faq">FAQ</a>
@@ -35,6 +36,7 @@
       <a href="#metodo">Método</a>
       <a href="#plan">Plan semanal</a>
       <a href="#rutinas">Rutinas</a>
+      <a href="#plan-hoy">Plan del día</a>
       <a href="#progresiones">Progresiones</a>
       <a href="#testimonios">Historias</a>
       <a href="#faq">FAQ</a>
@@ -506,6 +508,55 @@
     </div>
   </section>
 
+  <!-- Generador del plan del día -->
+  <section class="section section--alt" id="plan-hoy">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Tu plan de hoy</span>
+        <h2>Genera tu rutina del día</h2>
+        <p>Elige tu nivel y objetivo. El plan se monta con tu peso corporal, sin material, y respeta el descanso entre grupos musculares.</p>
+      </div>
+
+      <div class="dayplan">
+        <form class="dayplan__form" id="dayPlanForm">
+          <label class="field">
+            <span>Nivel actual</span>
+            <select id="dpNivel">
+              <option value="principiante">Principiante</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Objetivo / habilidad</span>
+            <select id="dpObjetivo">
+              <option value="primera dominada">Primera dominada</option>
+              <option value="handstand">Handstand (pino)</option>
+              <option value="muscle-up">Muscle-up</option>
+              <option value="planche">Planche</option>
+              <option value="front lever">Front lever</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Bloque del día</span>
+            <select id="dpBloque">
+              <option value="empuje">💪 Empuje</option>
+              <option value="traccion">🏋️ Tracción</option>
+              <option value="piernas_core">🦵 Piernas + core</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg dayplan__submit">Ver mi plan</button>
+        </form>
+
+        <div class="dayplan__hint">
+          <p>💡 Tip de coach: elige <strong>Tracción</strong> si hoy es tu día de dominadas. Repite cada bloque con al menos 48 h de descanso.</p>
+        </div>
+
+        <div class="dayplan__out" id="dayplanOut" hidden></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Progresiones -->
   <section class="section" id="progresiones">
     <div class="container">
@@ -647,6 +698,7 @@
         <h4>Entrena</h4>
         <a href="#metodo">Método</a>
         <a href="#plan">Plan semanal</a>
+        <a href="#plan-hoy">Plan del día</a>
         <a href="#progresiones">Progresiones</a>
       </div>
       <div class="footer__col">
