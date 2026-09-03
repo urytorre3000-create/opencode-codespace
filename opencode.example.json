@@ -1,11 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "deepseek-chat",
+  "model": "deepseek/deepseek-chat",
   "provider": {
     "deepseek": {
+      "options": {
+        "apiKey": "{env:DEEPSEEK_API_KEY}"
+      },
       "models": {
         "deepseek-chat": {},
-        "deepseek-reasoner": {}
+        "deepseek-reasoner": {},
+        "deepseek-v4-flash": {}
       }
     }
   }

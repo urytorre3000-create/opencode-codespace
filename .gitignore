@@ -1,3 +1,13 @@
 node_modules/
 .env
 *.log
+
+# Datos personales del atleta (no subir a git)
+calistenia_config.json
+calistenia_log.json
+
+# Entornos locales y secretos (¡nunca subir!)
+.ghconfig/
+.pylibs/
+__pycache__/
+*.pyc

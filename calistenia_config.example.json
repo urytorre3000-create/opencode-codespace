@@ -1,0 +1,9 @@
+{
+  "nombre": "Tu Nombre",
+  "correo": "tu_correo@gmail.com",
+  "nivel": "principiante",
+  "dias_por_semana": 3,
+  "duracion_min": 30,
+  "objetivo": "primera dominada",
+  "enfoque_semanal": ["empuje", "traccion", "piernas_core"]
+}

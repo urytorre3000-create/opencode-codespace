@@ -21,13 +21,49 @@ opencode
 
 `opencode.json` ya define el modelo `deepseek-chat`. La clave la lee de la variable/secreto `DEEPSEEK_API_KEY`. Si prefieres autenticarte interactivamente, escribe `/connect` y pega tu clave.
 
-## Archivos incluidos
+## 🧗 Agente: Entrenador Personal de Calistenia
 
-| Archivo | Rol |
-| --- | --- |
-| `.devcontainer/devcontainer.json` | Crea el Codespace (Ubuntu + Node LTS), instala opencode y ejecuta `setup.sh` |
-| `.devcontainer/setup.sh` | Crea `opencode.json` desde la plantilla y verifica la instalación |
-| `opencode.json` | Config del modelo (`deepseek-chat`) |
+Este repositorio incluye un **agente entrenador de calistenia** que te asesora todos
+los días y te envía un **recordatorio por correo** diario.
+
+- `AGENTS.md` — El "agente": instrucciones para que la IA actúe como tu coach
+  personal de calistenia (nivel, rotación, progresiones, motivación).
+- `entrenador_calistenia.py` — Genera el **plan del día** (calentamiento + rutina +
+  foco) según tu nivel y objetivo, y guarda el historial.
+- `enviar_recordatorio_diario.py` — Arma el plan y lo **envía por correo (SMTP)**.
+- `programar_recordatorio.sh` — Instala un **cron local** para el envío automático.
+- `.github/workflows/recordatorio-diario.yml` — Envío automático **en la nube**
+  (GitHub Actions) aunque el Codespace esté apagado.
+- `calistenia_config.example.json` — Tus preferencias: nivel, días/semana, objetivo.
+
+### Uso diario
+
+```bash
+python3 entrenador_calistenia.py             # ¿qué toca hoy?
+python3 entrenador_calistenia.py --completado # registrar que ya entrenaste
+python3 enviar_recordatorio_diario.py --preview # ver el correo sin enviarlo
+python3 enviar_recordatorio_diario.py        # enviar el correo de hoy
+```
+
+### Ponerlo automático (elige una opción)
+
+**Opción A — GitHub Actions (recomendada):** sube el repo a GitHub y crea estos
+**secrets** en `Settings → Secrets and variables → Actions`:
+`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `EMAIL_TO`. El workflow
+corre cada día a las 12:30 UTC (ajusta la hora en el archivo `.yml`).
+
+**Opción B — cron local:** edita la hora en `programar_recordatorio.sh` y ejecuta
+`./programar_recordatorio.sh install`. Requiere `.env` configurado.
+
+### Configuración del correo
+
+Copia `.env.example` a `.env` y completa `SMTP_HOST`, `SMTP_USER`,
+`SMTP_PASSWORD` (en Gmail: contraseña de aplicación) y `EMAIL_TO`.
+
+> Nota: `calistenia_config.json` y `calistenia_log.json` (tus datos) están en
+> `.gitignore` y no se suben. La plantilla `calistenia_config.example.json` sí.
+
+
 | `opencode.example.json` | Plantilla por si quieres versiones alternativas |
 | `.env.example` | Lista de variables/secrets a definir (copia a `.env` para local) |
 

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <title>Simón Bolívar chibi - The Liberator</title>
+  <desc>Cute chibi illustration of the Liberator Simón Bolívar with his uniform, bicorne hat and the flag of Venezuela.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ec8f7"/>
+      <stop offset="55%" stop-color="#b5e2fb"/>
+      <stop offset="100%" stop-color="#fff1c9"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#fff9c4"/>
+      <stop offset="60%" stop-color="#ffe082"/>
+      <stop offset="100%" stop-color="#ffb300"/>
+    </radialGradient>
+    <radialGradient id="skin" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#ffe3c2"/>
+      <stop offset="100%" stop-color="#f0b27a"/>
+    </radialGradient>
+    <linearGradient id="tunic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#33518f"/>
+      <stop offset="55%" stop-color="#233a6b"/>
+      <stop offset="100%" stop-color="#16233f"/>
+    </linearGradient>
+    <linearGradient id="hatGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a4d92"/>
+      <stop offset="100%" stop-color="#14264a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe894"/>
+      <stop offset="60%" stop-color="#f6c445"/>
+      <stop offset="100%" stop-color="#c9971a"/>
+    </linearGradient>
+    <linearGradient id="plume" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff5252"/>
+      <stop offset="55%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#ffd54f"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a5d66b"/>
+      <stop offset="100%" stop-color="#6fae4a"/>
+    </linearGradient>
+
+    <path id="star" d="M0,-18 L4,-5.6 L17.1,-5.6 L6.5,2.1 L10.6,14.6 L0,6.9 L-10.6,14.6 L-6.5,2.1 L-17.1,-5.6 L-4,-5.6 Z"/>
+    <path id="sparkle" d="M0,-14 Q2.2,0 14,0 Q2.2,0 0,14 Q-2.2,0 -14,0 Q-2.2,0 0,-14 Z"/>
+  </defs>
+
+  <!-- ===== CIELO ===== -->
+  <rect width="800" height="1000" fill="url(#sky)"/>
+
+  <!-- Sol -->
+  <circle cx="660" cy="150" r="140" fill="#ffd54f" opacity="0.25"/>
+  <circle cx="660" cy="150" r="95" fill="url(#sun)"/>
+  <g stroke="#ffb300" stroke-width="8" stroke-linecap="round" opacity="0.8">
+    <line x1="660" y1="28" x2="660" y2="48"/>
+    <line x1="660" y1="252" x2="660" y2="272"/>
+    <line x1="548" y1="150" x2="568" y2="150"/>
+    <line x1="752" y1="150" x2="772" y2="150"/>
+    <line x1="581" y1="71" x2="595" y2="85"/>
+    <line x1="725" y1="215" x2="739" y2="229"/>
+    <line x1="739" y1="71" x2="725" y2="85"/>
+    <line x1="595" y1="215" x2="581" y2="229"/>
+  </g>
+
+  <!-- Nubes -->
+  <g fill="#ffffff" opacity="0.92">
+    <g transform="translate(150,180)">
+      <circle cx="-36" cy="0" r="26"/>
+      <circle cx="0" cy="-22" r="34"/>
+      <circle cx="36" cy="0" r="26"/>
+      <rect x="-36" y="-10" width="72" height="36" rx="18"/>
+    </g>
+    <g transform="translate(630,300)">
+      <circle cx="-30" cy="0" r="22"/>
+      <circle cx="0" cy="-18" r="28"/>
+      <circle cx="30" cy="0" r="22"/>
+      <rect x="-30" y="-8" width="60" height="30" rx="15"/>
+    </g>
+    <g transform="translate(300,120)">
+      <circle cx="-24" cy="0" r="18"/>
+      <circle cx="0" cy="-14" r="23"/>
+      <circle cx="24" cy="0" r="18"/>
+      <rect x="-24" y="-6" width="48" height="24" rx="12"/>
+    </g>
+    <g transform="translate(740,520)">
+      <circle cx="-24" cy="0" r="18"/>
+      <circle cx="0" cy="-14" r="23"/>
+      <circle cx="24" cy="0" r="18"/>
+      <rect x="-24" y="-6" width="48" height="24" rx="12"/>
+    </g>
+  </g>
+
+  <!-- Estrellas (bandera de Venezuela) -->
+  <use href="#star" transform="translate(130,420) scale(1)" fill="#ffd94d"/>
+  <use href="#star" transform="translate(705,470) scale(0.8)" fill="#ffd94d"/>
+  <use href="#star" transform="translate(150,640) scale(0.6)" fill="#ffd94d"/>
+  <use href="#star" transform="translate(70,300) scale(0.5)" fill="#ffd94d"/>
+  <use href="#star" transform="translate(740,320) scale(0.7)" fill="#ffd94d"/>
+  <use href="#star" transform="translate(90,530) scale(0.5)" fill="#ffd94d"/>
+  <use href="#star" transform="translate(720,600) scale(0.6)" fill="#ffd94d"/>
+
+  <!-- ===== SUELO ===== -->
+  <path d="M0,870 Q200,830 400,845 Q600,860 800,835 L800,1000 L0,1000 Z" fill="url(#ground)"/>
+
+  <!-- Banderín de Venezuela plantado a la derecha -->
+  <g>
+    <line x1="620" y1="700" x2="620" y2="895" stroke="#7a4a21" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="620" cy="698" r="8" fill="url(#gold)" stroke="#a87b06" stroke-width="2"/>
+    <path d="M620,700 L762,690 C774,700 774,712 764,717 L620,725 Z" fill="#ffd54f" stroke="#e6a700" stroke-width="2.5"/>
+    <path d="M620,725 L764,717 C774,726 773,738 762,742 L620,750 Z" fill="#1e5bcc" stroke="#143d8a" stroke-width="2.5"/>
+    <path d="M620,750 L762,742 C771,750 770,761 760,765 L620,772 Z" fill="#e53935" stroke="#b71c1c" stroke-width="2.5"/>
+    <use href="#star" transform="translate(652,732) scale(0.18)" fill="#ffffff"/>
+    <use href="#star" transform="translate(692,734) scale(0.18)" fill="#ffffff"/>
+    <use href="#star" transform="translate(732,736) scale(0.18)" fill="#ffffff"/>
+  </g>
+
+  <!-- Flores -->
+  <g>
+    <line x1="170" y1="852" x2="170" y2="836" stroke="#3e7a2e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="158" cy="832" r="7" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="182" cy="832" r="7" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="170" cy="822" r="7" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="158" cy="846" r="7" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="182" cy="846" r="7" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="170" cy="836" r="6" fill="#ffd54f" stroke="#d4a017" stroke-width="2"/>
+
+    <line x1="250" y1="876" x2="250" y2="862" stroke="#3e7a2e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="240" cy="854" r="6" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="260" cy="854" r="6" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="250" cy="845" r="6" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="240" cy="866" r="6" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="260" cy="866" r="6" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="250" cy="858" r="5" fill="#ffd54f" stroke="#d4a017" stroke-width="1.5"/>
+
+    <line x1="560" y1="870" x2="560" y2="856" stroke="#3e7a2e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="549" cy="849" r="6" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="571" cy="849" r="6" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="560" cy="839" r="6" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="549" cy="860" r="6" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="571" cy="860" r="6" fill="#ffb3c6" stroke="#e05a7f" stroke-width="2"/>
+    <circle cx="560" cy="852" r="5" fill="#ffd54f" stroke="#d4a017" stroke-width="1.5"/>
+
+    <line x1="700" y1="852" x2="700" y2="840" stroke="#3e7a2e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="691" cy="834" r="5" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="709" cy="834" r="5" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="700" cy="826" r="5" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="691" cy="843" r="5" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="709" cy="843" r="5" fill="#ffffff" stroke="#c9a0dc" stroke-width="2"/>
+    <circle cx="700" cy="836" r="4.5" fill="#ffd54f" stroke="#d4a017" stroke-width="1.5"/>
+  </g>
+
+  <!-- ===== PERSONAJE ===== -->
+  <!-- Sombra bajo el personaje -->
+  <ellipse cx="400" cy="880" rx="230" ry="24" fill="rgba(30,40,10,0.15)"/>
+
+  <!-- Cabello de atrás -->
+  <ellipse cx="400" cy="500" rx="175" ry="160" fill="#33261c"/>
+
+  <!-- Cuello -->
+  <rect x="370" y="558" width="60" height="56" rx="14" fill="url(#skin)" stroke="#4a3226" stroke-width="4"/>
+  <ellipse cx="400" cy="590" rx="40" ry="12" fill="rgba(90,50,20,0.18)"/>
+
+  <!-- Cara -->
+  <circle cx="258" cy="485" r="22" fill="url(#skin)" stroke="#4a3226" stroke-width="4"/>
+  <circle cx="542" cy="485" r="22" fill="url(#skin)" stroke="#4a3226" stroke-width="4"/>
+  <ellipse cx="400" cy="478" rx="140" ry="130" fill="url(#skin)" stroke="#4a3226" stroke-width="4"/>
+
+  <!-- Rubor -->
+  <ellipse cx="305" cy="522" rx="30" ry="15" fill="#ff9db1" opacity="0.55"/>
+  <ellipse cx="495" cy="522" rx="30" ry="15" fill="#ff9db1" opacity="0.55"/>
+
+  <!-- Cejas -->
+  <path d="M300,428 Q320,414 342,422" stroke="#2e221a" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M458,422 Q480,414 500,428" stroke="#2e221a" stroke-width="7" stroke-linecap="round" fill="none"/>
+
+  <!-- Ojo izquierdo -->
+  <g>
+    <ellipse cx="330" cy="470" rx="36" ry="44" fill="#ffffff" stroke="#2e221a" stroke-width="3.5"/>
+    <circle cx="330" cy="478" r="21" fill="#5b3a1e" stroke="#2e221a" stroke-width="2.5"/>
+    <circle cx="330" cy="478" r="9" fill="#1a120c"/>
+    <circle cx="322" cy="466" r="6.5" fill="#ffffff" opacity="0.95"/>
+    <circle cx="338" cy="486" r="3" fill="#ffffff" opacity="0.8"/>
+    <path d="M296,448 Q330,422 364,448" stroke="#2e221a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Ojo derecho -->
+  <g>
+    <ellipse cx="470" cy="470" rx="36" ry="44" fill="#ffffff" stroke="#2e221a" stroke-width="3.5"/>
+    <circle cx="470" cy="478" r="21" fill="#5b3a1e" stroke="#2e221a" stroke-width="2.5"/>
+    <circle cx="470" cy="478" r="9" fill="#1a120c"/>
+    <circle cx="462" cy="466" r="6.5" fill="#ffffff" opacity="0.95"/>
+    <circle cx="478" cy="486" r="3" fill="#ffffff" opacity="0.8"/>
+    <path d="M436,448 Q470,422 504,448" stroke="#2e221a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Nariz -->
+  <path d="M400,498 Q405,510 399,516" stroke="#c98d5e" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Boca (sonrisa) -->
+  <path d="M372,536 Q400,560 428,536" stroke="#7a3b2e" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cabello delantero (flequillo con puntas) -->
+  <path d="M252,470
+           C245,390 290,340 400,340
+           C510,340 555,390 548,470
+           C535,425 505,405 470,412
+           C460,380 435,368 400,370
+           C365,368 340,380 330,412
+           C295,405 265,425 252,470 Z"
+        fill="#33261c" stroke="#221812" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Mechones laterales -->
+  <path d="M258,440 C240,500 245,560 262,600 C280,575 285,520 282,470 Z" fill="#33261c" stroke="#221812" stroke-width="3.5"/>
+  <path d="M542,440 C560,500 555,560 538,600 C520,575 515,520 518,470 Z" fill="#33261c" stroke="#221812" stroke-width="3.5"/>
+
+  <!-- Patillas (bigote/patillas icónicas) -->
+  <path d="M272,505 C262,528 268,550 284,562 C280,544 280,526 284,512 Z" fill="#33261c"/>
+  <path d="M528,505 C538,528 532,550 516,562 C520,544 520,526 516,512 Z" fill="#33261c"/>
+
+  <!-- ===== BICORNIO ===== -->
+  <g transform="rotate(-4 400 330)">
+    <!-- Corona del sombrero -->
+    <path d="M312,330 C312,262 348,236 400,236 C452,236 488,262 488,330 Z" fill="url(#hatGrad)" stroke="#1a2a45" stroke-width="4"/>
+    <!-- Ala (creciente) -->
+    <path d="M228,344 C300,292 500,292 572,344 C560,386 520,398 400,398 C280,398 240,386 228,344 Z" fill="url(#hatGrad)" stroke="#1a2a45" stroke-width="4"/>
+    <!-- Borde dorado superior del ala -->
+    <path d="M240,338 Q400,296 560,338" stroke="#ffd54f" stroke-width="6" opacity="0.85" fill="none" stroke-linecap="round"/>
+    <!-- Banda dorada inferior -->
+    <path d="M240,380 Q400,404 560,380" stroke="#ffd54f" stroke-width="8" opacity="0.9" fill="none" stroke-linecap="round"/>
+    <!-- Estrella al frente -->
+    <use href="#star" transform="translate(400,372) scale(0.45)" fill="#ffd54f" stroke="#a87b06" stroke-width="2"/>
+    <!-- Plumaje -->
+    <path d="M400,240 C396,208 372,184 380,150 C392,164 398,158 402,148 C410,160 420,150 418,176 C422,196 410,220 400,240 Z" fill="url(#plume)" stroke="#c2410c" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="400" cy="242" r="10" fill="url(#gold)" stroke="#a87b06" stroke-width="2.5"/>
+  </g>
+
+  <!-- ===== TÚNICA ===== -->
+  <!-- Solapas rojas del cuello -->
+  <path d="M340,596 L400,648 L400,616 Z" fill="#b71c1c" stroke="#7f1d1d" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M460,596 L400,648 L400,616 Z" fill="#b71c1c" stroke="#7f1d1d" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Cuerpo -->
+  <path d="M282,630 C270,710 282,800 322,836 L478,836 C518,800 530,710 518,630 C470,596 330,596 282,630 Z" fill="url(#tunic)" stroke="#16294e" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- Banda (sash) amarilla con borde rojo -->
+  <path d="M452,618 L528,632 L492,806 L416,792 Z" fill="#ffd54f" stroke="#e6a700" stroke-width="3"/>
+  <path d="M452,618 L528,632" stroke="#e53935" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M416,792 L492,806" stroke="#e53935" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Hombreras doradas -->
+  <g transform="rotate(-25 288 636)">
+    <ellipse cx="288" cy="636" rx="30" ry="20" fill="url(#gold)" stroke="#a87b06" stroke-width="3"/>
+    <line x1="266" y1="654" x2="266" y2="666" stroke="#c9960c" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="288" y1="656" x2="288" y2="670" stroke="#c9960c" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="310" y1="654" x2="310" y2="666" stroke="#c9960c" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(25 512 636)">
+    <ellipse cx="512" cy="636" rx="30" ry="20" fill="url(#gold)" stroke="#a87b06" stroke-width="3"/>
+    <line x1="490" y1="654" x2="490" y2="666" stroke="#c9960c" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="512" y1="656" x2="512" y2="670" stroke="#c9960c" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="534" y1="654" x2="534" y2="666" stroke="#c9960c" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Medalla estrella -->
+  <use href="#star" transform="translate(400,642) scale(0.62)" fill="url(#gold)" stroke="#a87b06" stroke-width="2.5"/>
+
+  <!-- Botones dorados -->
+  <g fill="url(#gold)" stroke="#a87b06" stroke-width="2.5">
+    <circle cx="400" cy="670" r="9"/>
+    <circle cx="400" cy="708" r="9"/>
+    <circle cx="400" cy="746" r="9"/>
+    <circle cx="400" cy="784" r="9"/>
+  </g>
+  <g fill="#a87b06">
+    <circle cx="400" cy="670" r="2.5"/>
+    <circle cx="400" cy="708" r="2.5"/>
+    <circle cx="400" cy="746" r="2.5"/>
+    <circle cx="400" cy="784" r="2.5"/>
+  </g>
+
+  <!-- Brazo izquierdo (mano en la cadera) -->
+  <path d="M292,634 C270,664 266,694 286,714 C302,692 310,664 306,638 Z" fill="url(#tunic)" stroke="#16294e" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="291" cy="718" r="15" fill="#f2c08e" stroke="#4a3226" stroke-width="3.5"/>
+
+  <!-- Brazo derecho (saludando) -->
+  <path d="M508,634 C536,610 548,580 530,552 C512,572 502,604 506,638 Z" fill="url(#tunic)" stroke="#16294e" stroke-width="4" stroke-linejoin="round"/>
+  <ellipse cx="532" cy="556" rx="20" ry="12" fill="#f5f5f5" stroke="#16294e" stroke-width="3" transform="rotate(-38 532 556)"/>
+  <circle cx="546" cy="542" r="16" fill="#fafafa" stroke="#16294e" stroke-width="3"/>
+  <path d="M568,520 Q576,530 568,542" stroke="#ffd54f" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M578,512 Q588,527 578,544" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- ===== BRILLOS ===== -->
+  <use href="#sparkle" transform="translate(180,330) scale(1)" fill="#ffd54f" opacity="0.95"/>
+  <use href="#sparkle" transform="translate(620,420) scale(0.9)" fill="#ffd54f" opacity="0.95"/>
+  <use href="#sparkle" transform="translate(240,660) scale(0.7)" fill="#ffd54f" opacity="0.9"/>
+  <use href="#sparkle" transform="translate(570,600) scale(0.8)" fill="#ffffff" opacity="0.95"/>
+  <use href="#sparkle" transform="translate(430,300) scale(0.7)" fill="#ffffff" opacity="0.9"/>
+  <use href="#sparkle" transform="translate(120,560) scale(0.6)" fill="#ffd54f" opacity="0.9"/>
+
+  <!-- ===== CARTEL ===== -->
+  <g>
+    <rect x="170" y="916" width="460" height="66" rx="33" fill="#fffdf3" stroke="#d4a017" stroke-width="4"/>
+    <use href="#star" transform="translate(222,952) scale(0.55)" fill="#ffd54f"/>
+    <use href="#star" transform="translate(578,952) scale(0.55)" fill="#ffd54f"/>
+    <text x="400" y="946" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="bold" fill="#1c3f6e">Simón Bolívar</text>
+    <text x="400" y="974" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#b8860b" font-style="italic">The Liberator</text>
+  </g>
+</svg>

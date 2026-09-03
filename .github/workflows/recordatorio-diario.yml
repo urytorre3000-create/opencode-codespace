@@ -1,0 +1,34 @@
+name: "📧 Recordatorio diario de calistenia"
+
+on:
+  schedule:
+    # UTC 12:30 ≈ 07:30 (Colombia/Perú) / 08:30 (Chile) — ajusta según tu zona
+    - cron: "30 12 * * *"
+  workflow_dispatch: {}   # permite ejecutarlo a mano desde la pestaña Actions
+
+jobs:
+  enviar-recordatorio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install python-dotenv
+
+      - name: Crear configuración del atleta
+        run: cp calistenia_config.example.json calistenia_config.json
+
+      - name: Enviar recordatorio diario
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python3 enviar_recordatorio_diario.py
