@@ -1,724 +1,810 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Almas en Movimiento — Entrenamiento de calistenia guiado: dominadas, fuerza y movilidad desde cero. Sin gimnasio, sin excusas." />
-  <title>Almas en Movimiento · Calistenia</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guacalitos Ojeda · Muebles y Organización | Catálogo</title>
+<meta name="description" content="Guacalitos Ojeda: cunas, escritorios, tocadores, exhibidores y organizadores de madera natural. Pedidos por WhatsApp 0414-650-3348. Síguenos en TikTok e Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --wood: #7a5230;
+        --wood-dark: #5c3d22;
+        --cream: #fbf6ef;
+        --blush: #f3e2e2;
+        --sand: #e9dccb;
+        --ink: #2b2118;
+        --muted: #8a7a6b;
+        --green: #1faf54;
+        --green-dark: #188c43;
+        --wa: #25d366;
+        --wa-dark: #1eb857;
+        --card: #ffffff;
+        --shadow: 0 10px 30px rgba(92, 61, 34, .10);
+        --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Inter', system-ui, 'Segoe UI', sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+        line-height: 1.55;
+    }
+    h1, h2, h3, .brand, .logo-name { font-family: 'Poppins', sans-serif; }
+    img { display: block; max-width: 100%; }
+
+    /* ---------- Header ---------- */
+    header {
+        position: sticky; top: 0; z-index: 900;
+        background: rgba(251, 246, 239, .92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--sand);
+    }
+    .nav {
+        max-width: 1200px; margin: 0 auto; padding: 14px 20px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo {
+        width: 44px; height: 44px; border-radius: 12px;
+        background: linear-gradient(135deg, var(--wood), var(--wood-dark));
+        display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 20px;
+    }
+    .brand-text .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--wood-dark); line-height: 1.1; }
+    .brand-text .logo-sub { font-size: .72rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 26px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: .95rem; }
+    .nav-links a:hover { color: var(--wood); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .btn {
+        border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+        font-weight: 600; border-radius: 12px; padding: 11px 18px;
+        font-size: .92rem; transition: transform .15s, box-shadow .15s, background .2s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-cart {
+        position: relative; background: var(--wood); color: #fff;
+        display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-cart:hover { background: var(--wood-dark); }
+    .cart-badge {
+        position: absolute; top: -7px; right: -7px; min-width: 22px; height: 22px;
+        border-radius: 999px; background: #e2b13c; color: #402d10; font-size: .74rem;
+        font-weight: 800; display: grid; place-items: center; padding: 0 5px;
+        box-shadow: 0 0 0 2px var(--cream);
+    }
+    .btn-ghost { background: transparent; border: 1.5px solid var(--wood); color: var(--wood); }
+    .btn-ghost:hover { background: var(--wood); color: #fff; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+        max-width: 1200px; margin: 30px auto; padding: 0 20px;
+        display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center;
+    }
+    .hero-left h2 { font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.12; color: var(--wood-dark); font-weight: 800; }
+    .hero-left h2 span { color: var(--wood); }
+    .hero-left p { margin: 18px 0 26px; color: var(--muted); font-size: 1.05rem; max-width: 470px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-primary { background: var(--green); color: #fff; box-shadow: 0 8px 20px rgba(31,175,84,.25); font-size: 1rem; }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-wa { background: var(--wa); color: #fff; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 8px 20px rgba(37,211,102,.28); font-size: 1rem; }
+    .btn-wa:hover { background: var(--wa-dark); }
+    .hero-stats { display: flex; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+    .stat b { font-size: 1.5rem; color: var(--wood-dark); display: block; font-family: 'Poppins'; }
+    .stat span { color: var(--muted); font-size: .85rem; }
+    .hero-right { position: relative; }
+    .hero-right img { border-radius: 24px; box-shadow: var(--shadow); width: 100%; height: 430px; object-fit: cover; }
+    .hero-card {
+        position: absolute; bottom: -18px; left: -18px; background: #fff; border-radius: 16px;
+        box-shadow: var(--shadow); padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+    }
+    .hero-card .ic { width: 42px; height: 42px; border-radius: 11px; background: var(--blush); display: grid; place-items: center; font-size: 20px; }
+    .hero-card b { font-size: .92rem; color: var(--wood-dark); display: block; }
+    .hero-card span { font-size: .78rem; color: var(--muted); }
+
+    /* ---------- Sections ---------- */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 54px 0; }
+    .section-head { text-align: center; margin-bottom: 38px; }
+    .section-head .tag {
+        display: inline-block; background: var(--blush); color: var(--wood-dark);
+        font-weight: 700; font-size: .78rem; padding: 6px 14px; border-radius: 999px;
+        letter-spacing: .05em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-head h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--wood-dark); font-weight: 800; }
+    .section-head p { color: var(--muted); margin-top: 8px; }
+
+    /* ---------- Product grid ---------- */
+    .grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 26px;
+    }
+    .card {
+        background: var(--card); border-radius: var(--radius); overflow: hidden;
+        box-shadow: 0 6px 22px rgba(92,61,34,.08); display: flex; flex-direction: column;
+        transition: transform .2s, box-shadow .2s; position: relative;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(92,61,34,.14); }
+    .card-img { position: relative; aspect-ratio: 4/3; background: var(--sand); overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .card:hover .card-img img { transform: scale(1.06); }
+    .badge {
+        position: absolute; top: 14px; left: 14px; background: rgba(255,255,255,.94);
+        color: var(--wood-dark); font-weight: 700; font-size: .72rem; padding: 6px 12px;
+        border-radius: 999px; box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; }
+    .card-body h4 { font-size: 1.12rem; color: var(--wood-dark); font-weight: 700; }
+    .card-cat { font-size: .78rem; color: var(--muted); margin: 3px 0 12px; text-transform: uppercase; letter-spacing: .04em; }
+    .specs { list-style: none; margin-bottom: 14px; }
+    .specs li { display: flex; gap: 8px; align-items: flex-start; font-size: .86rem; color: #5a4b3e; margin-bottom: 5px; }
+    .specs li::before { content: "✓"; color: var(--green); font-weight: 800; flex-shrink: 0; }
+    .card-price-row { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .price { font-size: 1.5rem; font-weight: 800; color: var(--green-dark); font-family: 'Poppins'; }
+    .price small { font-size: .8rem; color: var(--muted); font-weight: 600; }
+    .price-note { font-size: .74rem; color: var(--muted); margin-top: 2px; }
+    .card-btns { display: grid; grid-template-columns: 1.2fr 1fr; gap: 8px; margin-top: 12px; }
+    .btn-add { background: var(--wood); color: #fff; padding: 11px; }
+    .btn-add:hover { background: var(--wood-dark); }
+    .btn-card-wa { background: var(--wa); color: #fff; padding: 11px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+    .btn-card-wa:hover { background: var(--wa-dark); }
+    .thumbs { display: flex; gap: 8px; margin-top: 12px; }
+    .thumb { width: 56px; height: 42px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent; opacity: .7; transition: .15s; }
+    .thumb:hover { opacity: 1; }
+    .thumb.active { border-color: var(--wood); opacity: 1; }
+
+    /* ---------- Why us ---------- */
+    .why { background: #fff; border-radius: 26px; box-shadow: var(--shadow); padding: 40px; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .why-item { text-align: center; }
+    .why-item .ic { width: 62px; height: 62px; margin: 0 auto 14px; border-radius: 16px; background: var(--blush); display: grid; place-items: center; font-size: 26px; }
+    .why-item b { display: block; color: var(--wood-dark); font-size: 1.02rem; margin-bottom: 6px; }
+    .why-item span { color: var(--muted); font-size: .86rem; }
+
+    /* ---------- Steps ---------- */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .step { background: #fff; border-radius: var(--radius); padding: 26px; box-shadow: 0 6px 22px rgba(92,61,34,.06); }
+    .step .num { width: 42px; height: 42px; border-radius: 12px; background: var(--wood); color: #fff; display: grid; place-items: center; font-weight: 800; margin-bottom: 14px; font-family: 'Poppins'; }
+    .step b { color: var(--wood-dark); font-size: 1.05rem; display: block; margin-bottom: 6px; }
+    .step span { color: var(--muted); font-size: .9rem; }
+
+    /* ---------- Reviews ---------- */
+    .reviews { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+    .review {
+        background: #fff; border-radius: var(--radius); padding: 24px;
+        box-shadow: 0 6px 22px rgba(92,61,34,.06); display: flex; flex-direction: column; gap: 12px;
+    }
+    .review .stars { color: #e9b13c; font-size: 1.05rem; letter-spacing: 2px; }
+    .review p { color: #5a4b3e; font-size: .92rem; flex-grow: 1; }
+    .review .who { display: flex; align-items: center; gap: 10px; }
+    .review .who .av { width: 38px; height: 38px; border-radius: 50%; background: var(--blush); color: var(--wood-dark); display: grid; place-items: center; font-weight: 800; font-family: 'Poppins'; }
+    .review .who b { font-size: .92rem; color: var(--wood-dark); display: block; }
+    .review .who span { font-size: .78rem; color: var(--muted); }
+
+    /* ---------- Social ---------- */
+    .social { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .social-card {
+        background: #fff; border-radius: var(--radius); padding: 24px; text-align: center;
+        box-shadow: 0 6px 22px rgba(92,61,34,.06); text-decoration: none; transition: transform .2s, box-shadow .2s;
+    }
+    .social-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(92,61,34,.12); }
+    .social-card .ic { width: 54px; height: 54px; margin: 0 auto 12px; border-radius: 14px; display: grid; place-items: center; font-size: 26px; }
+    .social-card.tt .ic { background: #000; color: #fff; }
+    .social-card.ig .ic { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+    .social-card b { display: block; color: var(--wood-dark); font-size: 1.02rem; margin-bottom: 4px; }
+    .social-card span { color: var(--muted); font-size: .86rem; }
+
+    /* ---------- Contact / CTA ---------- */
+    .contact { background: linear-gradient(135deg, var(--wood), var(--wood-dark)); border-radius: 26px; color: #fff; padding: 44px; text-align: center; }
+    .contact h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+    .contact p { color: rgba(255,255,255,.85); max-width: 560px; margin: 0 auto 26px; }
+    .contact .btn-wa { background: #fff; color: var(--wa-dark); }
+    .contact .btn-wa:hover { background: #f0fff4; }
+    .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-top: 26px; font-size: .92rem; }
+    .contact-info a, .contact-info span { color: rgba(255,255,255,.92); text-decoration: none; }
+
+    /* ---------- Footer ---------- */
+    footer { background: #241a12; color: rgba(255,255,255,.7); padding: 30px 20px; margin-top: 40px; text-align: center; font-size: .85rem; }
+    footer a { color: var(--wa); text-decoration: none; }
+    .footer-social { display: flex; justify-content: center; gap: 18px; margin-top: 12px; }
+    .footer-social a { color: rgba(255,255,255,.85); font-weight: 600; text-decoration: none; }
+    .footer-social a:hover { color: var(--wa); }
+
+    /* ---------- Modal (Carrito + Checkout) ---------- */
+    .overlay {
+        position: fixed; inset: 0; background: rgba(36,26,18,.55);
+        display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px;
+    }
+    .overlay.show { display: flex; }
+    .modal {
+        background: #fff; border-radius: 20px; width: 100%; max-width: 520px;
+        max-height: 90vh; overflow-y: auto; padding: 26px; box-shadow: 0 30px 70px rgba(0,0,0,.3);
+        position: relative;
+    }
+    .modal h3 { color: var(--wood-dark); font-size: 1.4rem; margin-bottom: 4px; }
+    .modal .sub { color: var(--muted); font-size: .88rem; margin-bottom: 18px; }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: var(--sand); border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 1.05rem; cursor: pointer; color: var(--wood-dark); }
+    .mini { margin: 14px 0 20px; border: 1px solid var(--sand); border-radius: 14px; padding: 6px 14px; }
+    .mini-row { display: flex; justify-content: space-between; gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--sand); font-size: .9rem; }
+    .mini-row:last-child { border-bottom: none; }
+    .mini-total { display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 800; color: var(--green-dark); padding-top: 12px; }
+    fieldset { border: 1px solid var(--sand); border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+    legend { font-size: .82rem; color: var(--wood-dark); font-weight: 700; padding: 0 8px; }
+    .field { margin-bottom: 12px; }
+    .field label { display: block; font-size: .8rem; font-weight: 600; color: #57493b; margin-bottom: 5px; }
+    .field input, .field select, .field textarea {
+        width: 100%; padding: 11px 12px; border: 1.5px solid var(--sand); border-radius: 10px;
+        font-family: 'Inter'; font-size: .92rem; color: var(--ink); background: #fff;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--wood); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pay-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pay-opt {
+        border: 1.5px solid var(--sand); border-radius: 12px; padding: 12px; cursor: pointer;
+        text-align: center; transition: .15s; font-size: .86rem; font-weight: 600; color: #57493b;
+    }
+    .pay-opt small { display: block; font-weight: 500; color: var(--muted); margin-top: 3px; }
+    .pay-opt.active { border-color: var(--green); background: #f0faf3; color: var(--green-dark); }
+    .modal-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .btn-checkout { background: var(--green); color: #fff; padding: 13px; font-size: 1rem; box-shadow: 0 8px 20px rgba(31,175,84,.22); }
+    .btn-checkout:hover { background: var(--green-dark); }
+    .btn-wa-modal { background: var(--wa); color: #fff; padding: 13px; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-wa-modal:hover { background: var(--wa-dark); }
+    .secure { text-align: center; font-size: .76rem; color: var(--muted); margin-top: 14px; }
+
+    .spinner { width: 20px; height: 20px; border: 3px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .success-box { text-align: center; padding: 20px 6px; }
+    .success-box .ok { font-size: 58px; line-height: 1; }
+    .success-box h4 { color: var(--green-dark); margin: 10px 0 6px; }
+    .success-box p { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
+
+    /* ---------- WhatsApp float ---------- */
+    .wa-float {
+        position: fixed; bottom: 22px; right: 22px; z-index: 800; background: var(--wa);
+        color: #fff; border-radius: 999px; padding: 14px 20px; font-weight: 700; font-size: .95rem;
+        display: flex; align-items: center; gap: 9px; text-decoration: none;
+        box-shadow: 0 10px 26px rgba(37,211,102,.4); transition: transform .2s;
+    }
+    .wa-float:hover { transform: translateY(-3px); background: var(--wa-dark); }
+
+    /* Toast */
+    .toast {
+        position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%) translateY(120px);
+        background: var(--wood-dark); color: #fff; padding: 13px 22px; border-radius: 12px;
+        font-weight: 600; font-size: .92rem; z-index: 1200; transition: transform .35s;
+        box-shadow: 0 12px 30px rgba(0,0,0,.2);
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.green { background: var(--green-dark); }
+
+    @media (max-width: 860px) {
+        .hero { grid-template-columns: 1fr; }
+        .hero-right { order: -1; }
+        .hero-right img { height: 240px; }
+        .hero-card { left: 10px; bottom: -14px; }
+        .why-grid { grid-template-columns: 1fr 1fr; }
+        .steps { grid-template-columns: 1fr; }
+        .nav-links { display: none; }
+    }
+</style>
 </head>
 <body>
 
-  <!-- Barra de navegación -->
-  <header class="navbar">
-    <div class="container navbar__inner">
-      <a href="#" class="navbar__logo">Almas<span>en</span>Movimiento</a>
-      <nav class="navbar__links">
-        <a href="#metodo">Método</a>
-        <a href="#plan">Plan semanal</a>
-        <a href="#rutinas">Rutinas</a>
-        <a href="#plan-hoy">Plan del día</a>
-        <a href="#progresiones">Progresiones</a>
-        <a href="#testimonios">Historias</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <div class="navbar__actions">
-        <a href="#entrena" class="btn btn--primary">Entrenar hoy</a>
-      </div>
-      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="navbar__mobile" id="mobileMenu">
-      <a href="#metodo">Método</a>
-      <a href="#plan">Plan semanal</a>
-      <a href="#rutinas">Rutinas</a>
-      <a href="#plan-hoy">Plan del día</a>
-      <a href="#progresiones">Progresiones</a>
-      <a href="#testimonios">Historias</a>
-      <a href="#faq">FAQ</a>
-      <a href="#entrena" class="btn btn--primary">Entrenar hoy</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__grip"></div>
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <span class="badge">🔥 Tu primera dominada empieza aquí</span>
-        <h1>Domina tu cuerpo.<br /><span class="gradient-text">Despierta tu fuerza.</span></h1>
-        <p>
-          Calistenia progresiva y guiada, sin gimnasio y sin excusas. Construye
-          fuerza real, movilidad y control con un plan adaptado a tu nivel.
-        </p>
-        <div class="hero__actions">
-          <a href="#entrena" class="btn btn--primary btn--lg">Empezar gratis →</a>
-          <a href="#metodo" class="btn btn--outline btn--lg">Conocer el método</a>
+<header>
+    <div class="nav">
+        <div class="brand">
+            <div class="brand-logo">G</div>
+            <div class="brand-text">
+                <div class="logo-name">Guacalitos Ojeda</div>
+                <div class="logo-sub">Muebles y Organización</div>
+            </div>
         </div>
-        <div class="hero__stats">
-          <div class="stat">
-            <strong>100%</strong>
-            <p>Entrenamiento libre</p>
-          </div>
-          <div class="stat">
-            <strong>0€</strong>
-            <p>Sin gimnasio ni material</p>
-          </div>
-          <div class="stat">
-            <strong>+1000</strong>
-            <p>Almas en movimiento</p>
-          </div>
+        <nav class="nav-links">
+            <a href="#productos">Productos</a>
+            <a href="#reseñas">Reseñas</a>
+            <a href="#comprar">Cómo comprar</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+            <a class="btn btn-ghost" href="https://www.tiktok.com/@guacalitosojeda" target="_blank" style="text-decoration:none;display:inline-flex;align-items:center;padding:10px 14px">🎵</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/guacalitosojeda" target="_blank" style="text-decoration:none;display:inline-flex;align-items:center;padding:10px 14px">📸</a>
+            <button class="btn btn-cart" onclick="openCart()">🛒 Carrito <span class="cart-badge" id="cart-count">0</span></button>
         </div>
-      </div>
-      <div class="hero__visual">
-        <div class="ring ring--outer"></div>
-        <div class="ring ring--inner"></div>
-        <div class="bar bar--target">🏋️</div>
-        <div class="chalk">
-          <span class="chalk__label">Primera dominada</span>
-          <span class="chalk__bar"><i style="--w: 65%"></i></span>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-left">
+        <h2>Muebles de <span>madera natural</span>: cunas, escritorios y organización</h2>
+        <p>Fabricamos cunas, escritorios, tocadores, exhibidores y organizadores para manualidades. Calidad artesanal en madera natural, materiales seguros para tu familia y precios justos.</p>
+        <div class="hero-cta">
+            <button class="btn btn-primary" onclick="scrollTo('#productos')">Ver Catálogo</button>
+            <button class="btn btn-wa" onclick="openWhatsApp('Hola Guacalitos Ojeda, deseo hacer un pedido de muebles.')">💬 Pedir por WhatsApp</button>
         </div>
-        <div class="chalk chalk--two">
-          <span class="chalk__label">Fuerza · 3 meses</span>
-          <span class="chalk__bar"><i style="--w: 40%"></i></span>
+        <div class="hero-stats">
+            <div class="stat"><b>+500</b><span>Familias felices</span></div>
+            <div class="stat"><b>100%</b><span>Madera tratada</span></div>
+            <div class="stat"><b>7 días</b><span>Entrega o retiro</span></div>
         </div>
-      </div>
     </div>
-  </section>
-
-  <!-- Método -->
-  <section class="section" id="metodo">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag">El método</span>
-        <h2>Progresión seria, sin atajos</h2>
-        <p>Cada nivel tiene su paso siguiente. Así se llega lejos sin lesionarse.</p>
-      </div>
-      <div class="grid grid--3">
-        <article class="card">
-          <div class="card__num">01</div>
-          <h3>Evalúa tu punto de partida</h3>
-          <p>Medimos fuerza, movilidad y técnica actual con pruebas sencillas. Sin ego: se empieza donde toca.</p>
-        </article>
-        <article class="card">
-          <div class="card__num">02</div>
-          <h3>Sigue tu progresión exacta</h3>
-          <p>Cada ejercicio tiene una versión más fácil y otra más difícil. Siempre sabes cuál es tu siguiente reto.</p>
-        </article>
-        <article class="card">
-          <div class="card__num">03</div>
-          <h3>Descansa y reconstruye</h3>
-          <p>La fuerza se hace en el descanso. Planificamos volumen y recuperación para crecer sin estancarte.</p>
-        </article>
-        <article class="card">
-          <div class="card__num">04</div>
-          <h3>Mide tu avance</h3>
-          <p>Más repeticiones, mejor técnica, nuevas marcas. Registramos cada sesión para que veas el progreso real.</p>
-        </article>
-        <article class="card">
-          <div class="card__num">05</div>
-          <h3>Domina tu cuerpo</h3>
-          <p>De las dominadas al pino, al muscle-up y más. El cuerpo es el gimnasio y tú el arquitecto.</p>
-        </article>
-        <article class="card">
-          <div class="card__num">06</div>
-          <h3>Mueve tu alma</h3>
-          <p>Entrenar es meditación en movimiento. Fuerza mental, disciplina y confianza que se llevan a la vida.</p>
-        </article>
-      </div>
+    <div class="hero-right">
+        <img src="81XqcsgYnVL._AC_UF894,1000_QL80_FMwebp_.webp" onerror="this.onerror=null;this.src=placeholder('Cuna de Pino Natural')" alt="Cuna de pino natural">
+        <div class="hero-card">
+            <div class="ic">🛡️</div>
+            <div><b>Calidad garantizada</b><span>Pino sostenible y seguro para bebés</span></div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Banda CTA -->
-  <section class="cta-band">
-    <div class="container cta-band__inner">
-      <h2>No se trata de estar fuerte.<br />Se trata de <span class="gradient-text">moverte con propósito</span>.</h2>
-      <a href="#entrena" class="btn btn--light">Únete gratis</a>
+<section id="productos" class="container">
+    <div class="section-head">
+        <span class="tag">Catálogo</span>
+        <h3>Nuestro Catálogo</h3>
+        <p>Selecciona tus muebles, añádelos al carrito y paga de forma segura o envíanos tu pedido por WhatsApp.</p>
     </div>
-  </section>
+    <div class="grid" id="product-list"></div>
+</section>
 
-  <!-- Plan semanal -->
-  <section class="section section--alt" id="plan">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag">Tu semana</span>
-        <h2>3 días. 30 minutos. Sin excusas.</h2>
-        <p>Una rotación que respeta la recuperación de cada grupo muscular.</p>
-      </div>
-      <div class="grid grid--3">
-        <article class="card card--day">
-          <span class="card__day">Día A</span>
-          <h3>Empuje</h3>
-          <ul>
-            <li>Flexiones · 4 series</li>
-            <li>Fondos en banco · 3 series</li>
-            <li>Pike push-up · 3 series</li>
-            <li>Plancha · 3×30s</li>
-          </ul>
-        </article>
-        <article class="card card--day">
-          <span class="card__day">Día B</span>
-          <h3>Tracción</h3>
-          <ul>
-            <li>Dominadas australianas · 4 series</li>
-            <li>Dominadas con banda · 3 series</li>
-            <li>Remo invertido · 3 series</li>
-            <li>Colgado activo · 3×20s</li>
-          </ul>
-        </article>
-        <article class="card card--day">
-          <span class="card__day">Día C</span>
-          <h3>Pierna + Core</h3>
-          <ul>
-            <li>Sentadillas · 4 series</li>
-            <li>Zancadas · 3 series</li>
-            <li>Puente a una pierna · 3 series</li>
-            <li>Hollow body · 3×20s</li>
-          </ul>
-        </article>
-      </div>
-      <div class="plan__note">
-        <p>⚡ Cada bloque incluye calentamiento y estiramientos. Empieza a tu ritmo y sube 1–2 repeticiones cuando domines la técnica.</p>
-      </div>
+<section class="container" id="reseñas">
+    <div class="section-head">
+        <span class="tag">Reseñas</span>
+        <h3>Lo que dicen nuestros clientes</h3>
+        <p>Comentarios reales de personas que ya tienen un Guacalitos Ojeda en casa.</p>
     </div>
-  </section>
+    <div class="reviews" id="reviews-list"></div>
+</section>
 
-  <!-- Rutinas por día -->
-  <section class="section" id="rutinas">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag">Rutinas día a día</span>
-        <h2>Tu semana, explicada paso a paso</h2>
-        <p>Abre cada día y encuentra la rutina completa: calentamiento, técnica, series y estiramientos. Nivel principiante — y al final, cómo progresar.</p>
-      </div>
+<section class="container" id="comprar">
+    <div class="section-head">
+        <span class="tag">Cómo comprar</span>
+        <h3>Compra fácil y segura</h3>
+    </div>
+    <div class="steps">
+        <div class="step"><div class="num">1</div><b>Elige tus muebles</b><span>Añade los productos que te gustan a tu carrito con un clic.</span></div>
+        <div class="step"><div class="num">2</div><b>Paga con la pasarela</b><span>Pago con tarjeta, pago móvil, Zelle o Binance de forma segura, o por WhatsApp.</span></div>
+        <div class="step"><div class="num">3</div><b>Confirmamos tu pedido</b><span>Recibes confirmación por WhatsApp y coordinamos la entrega.</span></div>
+    </div>
+</section>
 
-      <div class="semana">
+<section class="container">
+    <div class="why">
+        <div class="section-head" style="margin-bottom:26px">
+            <span class="tag">Por qué elegirnos</span>
+            <h3>Pensado para tu familia</h3>
+        </div>
+        <div class="why-grid">
+            <div class="why-item"><div class="ic">🌰</div><b>Madera natural</b><span>Pino sólido tratado y duradero</span></div>
+            <div class="why-item"><div class="ic">🛡️</div><b>Seguro para bebés</b><span>Bordes suaves y sin astillas</span></div>
+            <div class="why-item"><div class="ic">📏</div><b>Medidas ideales</b><span>Diseñados para espacios pequeños</span></div>
+            <div class="why-item"><div class="ic">🎨</div><b>Estilo moderno</b><span>Acabados blancos y naturales elegantes</span></div>
+        </div>
+    </div>
+</section>
 
-        <div class="semana__grid" role="tablist" aria-label="Días de la semana">
-          <button class="semana__tab" data-dia="lunes" role="tab" aria-selected="true">Lun</button>
-          <button class="semana__tab" data-dia="martes" role="tab" aria-selected="false">Mar</button>
-          <button class="semana__tab" data-dia="miercoles" role="tab" aria-selected="false">Mié</button>
-          <button class="semana__tab" data-dia="jueves" role="tab" aria-selected="false">Jue</button>
-          <button class="semana__tab" data-dia="viernes" role="tab" aria-selected="false">Vie</button>
-          <button class="semana__tab" data-dia="sabado" role="tab" aria-selected="false">Sáb</button>
-          <button class="semana__tab" data-dia="domingo" role="tab" aria-selected="false">Dom</button>
+<section class="container">
+    <div class="section-head">
+        <span class="tag">Síguenos</span>
+        <h3>Guacalitos Ojeda en redes</h3>
+        <p>Encuentra más ideas, ofertas y proyectos en nuestro TikTok e Instagram.</p>
+    </div>
+    <div class="social">
+        <a class="social-card tt" href="https://www.tiktok.com/@guacalitosojeda" target="_blank">
+            <div class="ic">🎵</div>
+            <b>TikTok</b>
+            <span>@guacalitosojeda</span>
+        </a>
+        <a class="social-card ig" href="https://www.instagram.com/guacalitosojeda" target="_blank">
+            <div class="ic">📸</div>
+            <b>Instagram</b>
+            <span>@guacalitosojeda</span>
+        </a>
+    </div>
+</section>
+
+<section class="container" id="contacto">
+    <div class="contact">
+        <h3>¿Listo para el mueble perfecto de tu hogar?</h3>
+        <p>Escríbenos por WhatsApp y te asesoramos sin compromiso. También puedes completar tu compra en línea con nuestra pasarela de pago segura.</p>
+        <button class="btn btn-wa" onclick="openWhatsApp('Hola Guacalitos Ojeda, quiero información de sus muebles.')">💬 Chatear por WhatsApp · 0414-650-3348</button>
+        <div class="contact-info">
+            <span>📞 0414-650-3348</span>
+            <a href="https://www.tiktok.com/@guacalitosojeda" target="_blank">🎵 TikTok</a>
+            <a href="https://www.instagram.com/guacalitosojeda" target="_blank">📸 Instagram</a>
+            <span>📍 Entrega a domicilio / retiro en tienda</span>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Guacalitos Ojeda · Muebles y Organización · Contacto: <a href="https://wa.me/584146503348" target="_blank">0414-650-3348</a></p>
+    <div class="footer-social">
+        <a href="https://www.tiktok.com/@guacalitosojeda" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/guacalitosojeda" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="wa-float" href="https://wa.me/584146503348?text=Hola%20Guacalitos%20Ojeda%2C%20deseo%20informaci%C3%B3n%20de%20sus%20muebles." target="_blank">💬 WhatsApp <span style="font-weight:500">0414-650-3348</span></a>
+
+<!-- Modal Carrito / Checkout -->
+<div class="overlay" id="cart-overlay">
+    <div class="modal">
+        <button class="modal-close" onclick="closeAll()">✕</button>
+
+        <!-- Paso 1: revisión -->
+        <div id="step-review">
+            <h3>🛒 Tu carrito</h3>
+            <p class="sub">Revisa tu pedido y elige cómo pagar.</p>
+            <div class="mini" id="cart-mini"></div>
+
+            <fieldset>
+                <legend>🛡️ Pasarela de pago</legend>
+                <div class="pay-options" id="pay-options">
+                    <div class="pay-opt active" data-pay="Tarjeta de crédito/débito" onclick="selectPay(this)">💳 Tarjeta<small>Crédito / Débito</small></div>
+                    <div class="pay-opt" data-pay="Pago Móvil" onclick="selectPay(this)">📱 Pago Móvil<small>Bancos de Venezuela</small></div>
+                    <div class="pay-opt" data-pay="Zelle" onclick="selectPay(this)">🏦 Zelle<small>USD / transferencia</small></div>
+                    <div class="pay-opt" data-pay="Binance Pay" onclick="selectPay(this)">🪙 Binance Pay<small>Cripto</small></div>
+                </div>
+            </fieldset>
+
+            <div class="modal-btns">
+                <button class="btn btn-wa-modal" onclick="payWhatsApp()">💬 Pedir por WhatsApp</button>
+                <button class="btn btn-checkout" onclick="goCheckout()">Pagar · $<span id="total-review">0.00</span></button>
+            </div>
+            <p class="secure">🔒 Transacción cifrada · No almacenamos tus datos de tarjeta</p>
         </div>
 
-        <!-- LUNES -->
-        <article class="rutina is-active" id="dia-lunes" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day">Día A · Lunes</span>
-            <h3>💪 Empuje — Fuerza de empuje horizontal y vertical</h3>
-            <p class="rutina__meta">~30 min · Nivel principiante · Descanso entre series: 60 s</p>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>🔥 Calentamiento <em>(5–8 min)</em></h4>
-            <ol>
-              <li><strong>Círculos de hombros</strong> — 15 hacia delante + 15 atrás. Abre la articulación antes de empujar.</li>
-              <li><strong>Movilidad de muñecas</strong> — flexión/extensión y círculos, 30 s. Tus muñecas sostienen todo el peso.</li>
-              <li><strong>Flexiones en pared</strong> — 10 lentas. Activan pectoral y tríceps sin cargar.</li>
-              <li><strong>Saltos de tijera o marcha en el sitio</strong> — 60 s para subir pulsaciones.</li>
-            </ol>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>💪 Entrenamiento principal</h4>
-            <ul class="rutina__ejercicios">
-              <li>
-                <span class="ej">
-                  <strong>Flexiones en pared</strong>
-                  <em>4 × 8–12 · descanso 60 s</em>
-                </span>
-                <p>Técnica: de pie frente a la pared, manos a la altura de los hombros. Flexiona los codos llevando el pecho a la pared, mantén el cuerpo recto de cabeza a pies. Inhala al bajar, exhala al empujar.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Flexiones de rodillas</strong>
-                  <em>3 × 6–10 · descanso 60 s</em>
-                </span>
-                <p>Técnica: apoyo en rodillas, manos algo más anchas que los hombros, espalda neutra. Baja el pecho casi hasta el suelo y empuja. Si sientes dolor de muñeca, apoya sobre los puños o mancuernas.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Fondos en banco (tríceps)</strong>
-                  <em>3 × 8–12 · descanso 60 s</em>
-                </span>
-                <p>Técnica: manos en el borde de una silla/banco, piernas extendidas. Baja flexionando codos a 90° sin separarlos del cuerpo; sube hasta estirar sin bloquear. Los codos apuntan atrás, no a los lados.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Plancha sobre rodillas</strong>
-                  <em>3 × 20–30 s · descanso 45 s</em>
-                </span>
-                <p>Técnica: antebrazos en el suelo, cuerpo alineado, glúteo y abdomen activados. No hundas ni levantes la cadera; respira de forma continua.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="rutina__bloque rutina__foco">
-            <h4>🎯 Foco del día: <em>hacia tu primera dominada</em></h4>
-            <p>Hoy no toca traccionar fuerte, pero activamos la espalda para prepararla:</p>
-            <ul>
-              <li><strong>Encogimientos en barra (scapular pull-ups)</strong> — 3 × 10: cuélgate y baja los omóplatos sin doblar codos. Es el "encendido" de tu espalda.</li>
-              <li><strong>Colgado activo</strong> — 3 × 15–20 s: hombros alejados de las orejas, cuerpo tenso.</li>
-            </ul>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>🧘 Enfriamiento y estiramientos <em>(5 min)</em></h4>
-            <ul>
-              <li>Estiramiento de pectoral en marco de puerta — 30 s por lado.</li>
-              <li>Estiramiento de tríceps detrás de la cabeza — 30 s por lado.</li>
-              <li>Flexión de muñecas — 20 s por lado.</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- MARTES -->
-        <article class="rutina" id="dia-martes" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day rutina__descanso">Descanso activo</span>
-            <h3>🚶 Martes — Recuperación activa</h3>
-            <p class="rutina__meta">15–20 min · Ligero · El músculo crece descansando</p>
-          </div>
-          <div class="rutina__bloque">
-            <h4>👟 Qué hacer hoy</h4>
-            <ul>
-              <li><strong>Camina 20–30 min</strong> al aire libre, a ritmo tranquilo.</li>
-              <li><strong>Movilidad de hombros y caderas</strong> — 10 min con círculos, balanceos y sentadilla profunda sostenida (30 s).</li>
-              <li><strong>Estiramiento suave</strong> de la espalda (postura del niño, 1 min).</li>
-            </ul>
-            <p>Evita el entrenamiento intenso: tus músculos de empuje se están reparando. Mañana atacamos tracción con energía.</p>
-          </div>
-        </article>
-
-        <!-- MIÉRCOLES -->
-        <article class="rutina" id="dia-miercoles" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day">Día B · Miércoles</span>
-            <h3>🏋️ Tracción — Construye tu primera dominada</h3>
-            <p class="rutina__meta">~30 min · Nivel principiante · Descanso entre series: 75 s</p>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>🔥 Calentamiento <em>(5–8 min)</em></h4>
-            <ol>
-              <li><strong>Rotaciones de cuello y hombros</strong> — 1 min, suaves.</li>
-              <li><strong>Movilidad de muñecas y codos</strong> — 30 s.</li>
-              <li><strong>Colgado de barra 15 s</strong> (o agarre en mesa si no hay barra) para descomprimir la espalda.</li>
-              <li><strong>Mountain climbers o marcha en el sitio</strong> — 60 s.</li>
-            </ol>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>💪 Entrenamiento principal</h4>
-            <ul class="rutina__ejercicios">
-              <li>
-                <span class="ej">
-                  <strong>Dominada australiana (agarre ancho)</strong>
-                  <em>4 × 8–12 · descanso 75 s</em>
-                </span>
-                <p>Técnica: cuélgate debajo de una barra baja o mesa firme, cuerpo recto, talones en el suelo. Tira del pecho hacia la barra juntando los omóplatos. Baja lento (2–3 s). Cuanto más vertical el cuerpo, más fácil; cuanto más horizontal, más difícil.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Dominada australiana (agarre supino)</strong>
-                  <em>3 × 8–12 · descanso 75 s</em>
-                </span>
-                <p>Técnica: igual pero con palmas mirando hacia ti. Activa más bíceps y da variedad al agarre. Termina cada repetición con los brazos estirados.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Remo con toalla en puerta</strong>
-                  <em>3 × 8–12 · descanso 60 s</em>
-                </span>
-                <p>Técnica: enrolla una toalla sobre el pomo de una puerta firme, sujeta un extremo con cada mano e inclínate hacia atrás. Tira del pecho hacia la puerta manteniendo el cuerpo recto. Alternativa sin barra y muy segura.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Encogimientos en barra (scapular pull-ups)</strong>
-                  <em>3 × 10–15 · descanso 45 s</em>
-                </span>
-                <p>Técnica: colgado, baja los omóplatos hacia la cadera sin flexionar los codos, aguanta 1 s y vuelve. Aprende a "encender" la espalda antes de tirar.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="rutina__bloque rutina__foco">
-            <h4>🎯 Foco del día: <em>primera dominada</em></h4>
-            <ul>
-              <li><strong>Negativas lentas</strong> — 3 × 3–5: súbete con un salto o banco a la posición final de dominada y baja en 5 s contados. Es el ejercicio que más acelera tu primera dominada.</li>
-              <li><strong>Dominada con banda elástica</strong> (si tienes) — 3 × 5: la banda te asiste justo en la parte más difícil.</li>
-            </ul>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>🧘 Enfriamiento y estiramientos <em>(5 min)</em></h4>
-            <ul>
-              <li>Colgado pasivo de barra 30 s para estirar dorsales.</li>
-              <li>Estiramiento de bíceps (brazo estirado, palma atrás) — 30 s por lado.</li>
-              <li>Postura del niño — 1 min.</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- JUEVES -->
-        <article class="rutina" id="dia-jueves" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day rutina__descanso">Descanso activo</span>
-            <h3>🧘 Jueves — Movilidad y core suave</h3>
-            <p class="rutina__meta">15–20 min · Ligero · Prepara tus caderas para el día C</p>
-          </div>
-          <div class="rutina__bloque">
-            <h4>👟 Qué hacer hoy</h4>
-            <ul>
-              <li><strong>Sentadilla profunda sostenida</strong> — 3 × 30 s. Agárrate a algo si pierdes el equilibrio; abre bien las caderas.</li>
-              <li><strong>Balanceos de pierna</strong> — 10 por pierna y dirección (frontal y lateral).</li>
-              <li><strong>Rotaciones de cadera en círculo</strong> — 10 por lado.</li>
-              <li><strong>Puente de glúteo</strong> — 2 × 15 suaves para despertar el glúteo.</li>
-              <li><strong>Estiramiento de cuádriceps</strong> — 30 s por pierna.</li>
-            </ul>
-            <p>Mañana toca pierna y core: hoy solo movilizamos para llegar fresco.</p>
-          </div>
-        </article>
-
-        <!-- VIERNES -->
-        <article class="rutina" id="dia-viernes" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day">Día C · Viernes</span>
-            <h3>🦵 Pierna + Core — Base de todo</h3>
-            <p class="rutina__meta">~30 min · Nivel principiante · Descanso entre series: 60 s</p>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>🔥 Calentamiento <em>(5–8 min)</em></h4>
-            <ol>
-              <li><strong>Círculos de cadera y rodillas</strong> — 1 min en total.</li>
-              <li><strong>Sentadillas de movilidad (sin peso)</strong> — 10 lentas.</li>
-              <li><strong>Zancadas al aire caminando</strong> — 6 por pierna.</li>
-              <li><strong>Elevaciones de rodillas en el sitio</strong> — 60 s.</li>
-            </ol>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>💪 Entrenamiento principal</h4>
-            <ul class="rutina__ejercicios">
-              <li>
-                <span class="ej">
-                  <strong>Sentadilla con peso corporal</strong>
-                  <em>4 × 12–20 · descanso 60 s</em>
-                </span>
-                <p>Técnica: pies algo más anchos que los hombros, puntas ligeramente hacia fuera. Baja como si fueras a sentarte, pecho arriba, rodillas siguiendo la dirección de los pies. Baja hasta donde tu espalda se mantenga neutra.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Zancadas alternas</strong>
-                  <em>3 × 8–10 por pierna · descanso 60 s</em>
-                </span>
-                <p>Técnica: paso largo al frente y baja hasta que ambas rodillas formen ~90°. La rodilla trasera casi toca el suelo. Mantén el torso erguido; usa una pared de apoyo al principio si te cuesta el equilibrio.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Puente de glúteo</strong>
-                  <em>3 × 12–15 · descanso 45 s</em>
-                </span>
-                <p>Técnica: tumbado, rodillas flexionadas, pies en el suelo. Eleva la cadera apretando el glúteo 1 s arriba sin arquear la espalda baja. Baja controlado.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Plancha frontal</strong>
-                  <em>3 × 20–40 s · descanso 45 s</em>
-                </span>
-                <p>Técnica: antebrazos en el suelo, cuerpo en línea recta, abdomen y glúteo activos. Si la cadera baja, termina la serie antes: mejor 20 s perfectos que 40 s hundidos.</p>
-              </li>
-              <li>
-                <span class="ej">
-                  <strong>Elevaciones de pierna tumbado</strong>
-                  <em>3 × 10–15 · descanso 45 s</em>
-                </span>
-                <p>Técnica: tumbado boca arriba, piernas estiradas. Sube y baja sin tocar el suelo, con la espalda baja pegada al piso. Si se separa la zona lumbar, flexiona un poco las rodillas.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="rutina__bloque rutina__foco">
-            <h4>🎯 Foco del día: <em>core para tu dominada</em></h4>
-            <ul>
-              <li><strong>Hollow body hold</strong> — 3 × 15–25 s: tumbado, brazos y piernas elevados, espalda baja pegada al suelo. Es el core que mantiene tu cuerpo firme colgado de la barra.</li>
-            </ul>
-          </div>
-
-          <div class="rutina__bloque">
-            <h4>🧘 Enfriamiento y estiramientos <em>(5 min)</em></h4>
-            <ul>
-              <li>Estiramiento de cuádriceps de pie — 30 s por pierna.</li>
-              <li>Estiramiento de isquios (pierna estirada sobre una silla) — 30 s por pierna.</li>
-              <li>Estiramiento de gemelos contra la pared — 30 s por pierna.</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- SÁBADO -->
-        <article class="rutina" id="dia-sabado" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day rutina__descanso">Descanso activo</span>
-            <h3>🚶 Sábado — Juego y movimiento libre</h3>
-            <p class="rutina__meta">20–30 min · Ligero · Muévete porque te apetece</p>
-          </div>
-          <div class="rutina__bloque">
-            <h4>👟 Qué hacer hoy</h4>
-            <ul>
-              <li><strong>Camina, corre suave o monta en bici</strong> — 20–30 min.</li>
-              <li><strong>Juega con el equilibrio</strong>: pino en pared si ya te atreves, o apoyo en una pierna con ojos cerrados.</li>
-              <li><strong>Estiramiento global</strong> — 10 min tocando todas las zonas trabajadas en la semana.</li>
-            </ul>
-            <p>Sin presión. El sábado es para recordar que moverse es un placer, no solo un entrenamiento.</p>
-          </div>
-        </article>
-
-        <!-- DOMINGO -->
-        <article class="rutina" id="dia-domingo" role="tabpanel">
-          <div class="rutina__head">
-            <span class="card__day rutina__descanso">Descanso total</span>
-            <h3>😴 Domingo — Recuperación completa</h3>
-            <p class="rutina__meta">Descansa · Duerme bien · Vuelve a empezar el lunes</p>
-          </div>
-          <div class="rutina__bloque">
-            <h4>💤 Qué hacer hoy</h4>
-            <ul>
-              <li><strong>Descansa.</strong> Sin entrenamiento de fuerza: el músculo se repara y crece mientras duermes.</li>
-              <li><strong>Duerme 7–9 h</strong> e hidrátate bien durante el día.</li>
-              <li><strong>Comida rica en proteína</strong> en las comidas principales para alimentar la recuperación.</li>
-              <li>Si te apetece, un paseo suave de 15 min no hace daño. Nada más.</li>
-            </ul>
-            <p>El lunes empieza una nueva semana. Revisa tu técnica en el espejo y sube 1–2 repeticiones en los ejercicios que dominaste.</p>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="plan__note">
-        <p>⚡ <strong>¿Cómo progresar?</strong> Cuando completes un ejercicio con la mejor técnica y sin llegar al fallo dos semanas seguidas, sube 1–2 repeticiones. Cuando domines todas las series, pasa a la siguiente progresión (ver abajo). Respeta siempre 48 h antes de repetir empuje o tracción.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Generador del plan del día -->
-  <section class="section section--alt" id="plan-hoy">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag">Tu plan de hoy</span>
-        <h2>Genera tu rutina del día</h2>
-        <p>Elige tu nivel y objetivo. El plan se monta con tu peso corporal, sin material, y respeta el descanso entre grupos musculares.</p>
-      </div>
-
-      <div class="dayplan">
-        <form class="dayplan__form" id="dayPlanForm">
-          <label class="field">
-            <span>Nivel actual</span>
-            <select id="dpNivel">
-              <option value="principiante">Principiante</option>
-              <option value="intermedio">Intermedio</option>
-              <option value="avanzado">Avanzado</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>Objetivo / habilidad</span>
-            <select id="dpObjetivo">
-              <option value="primera dominada">Primera dominada</option>
-              <option value="handstand">Handstand (pino)</option>
-              <option value="muscle-up">Muscle-up</option>
-              <option value="planche">Planche</option>
-              <option value="front lever">Front lever</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>Bloque del día</span>
-            <select id="dpBloque">
-              <option value="empuje">💪 Empuje</option>
-              <option value="traccion">🏋️ Tracción</option>
-              <option value="piernas_core">🦵 Piernas + core</option>
-            </select>
-          </label>
-          <button type="submit" class="btn btn--primary btn--lg dayplan__submit">Ver mi plan</button>
-        </form>
-
-        <div class="dayplan__hint">
-          <p>💡 Tip de coach: elige <strong>Tracción</strong> si hoy es tu día de dominadas. Repite cada bloque con al menos 48 h de descanso.</p>
+        <!-- Paso 2: datos + pago -->
+        <div id="step-checkout" style="display:none">
+            <h3>💳 Datos de facturación</h3>
+            <p class="sub">Completa tus datos para procesar el pago de forma segura.</p>
+            <div class="field"><label>Nombre completo</label><input id="c-name" placeholder="Tu nombre y apellido"></div>
+            <div class="grid-2">
+                <div class="field"><label>Teléfono</label><input id="c-phone" placeholder="0414-000-0000"></div>
+                <div class="field"><label>Email (opcional)</label><input id="c-email" placeholder="correo@ejemplo.com"></div>
+            </div>
+            <div class="field"><label>Dirección de entrega</label><textarea id="c-address" rows="2" placeholder="Dirección completa / punto de referencia"></textarea></div>
+            <div class="field"><label>Método de pago (pasarela)</label><input id="c-method" value="Tarjeta de crédito/débito" readonly></div>
+            <div class="modal-btns">
+                <button class="btn btn-wa-modal" onclick="payWhatsApp()">💬 Pagar por WhatsApp</button>
+                <button class="btn btn-checkout" id="process-btn" onclick="processCard()">🔒 Confirmar pago · $<span id="total-checkout">0.00</span></button>
+            </div>
+            <p class="secure">Se abrirá la pasarela de pago segura para completar la transacción.</p>
         </div>
 
-        <div class="dayplan__out" id="dayplanOut" hidden></div>
-      </div>
+        <!-- Paso 3: éxito -->
+        <div id="step-success" style="display:none">
+            <div class="success-box">
+                <div class="ok">✅</div>
+                <h4>¡Pago procesado!</h4>
+                <p id="success-msg">Tu pedido fue registrado. Te contactaremos por WhatsApp para confirmar la entrega.</p>
+                <div class="mini" id="success-mini"></div>
+                <button class="btn btn-checkout" style="width:100%" onclick="closeAll()">Hecho</button>
+            </div>
+        </div>
     </div>
-  </section>
+</div>
 
-  <!-- Progresiones -->
-  <section class="section" id="progresiones">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag">Progresiones</span>
-        <h2>De cero a dominada (y más allá)</h2>
-        <p>El camino de cada habilidad, paso a paso y con técnica segura.</p>
-      </div>
-      <div class="ladder">
-        <div class="ladder__row ladder__row--head">
-          <span>Habilidad</span>
-          <span>Tu camino</span>
-          <span>Meta</span>
-        </div>
-        <div class="ladder__row">
-          <strong>Dominada</strong>
-          <p>Australiana → banda → negativa → dominada</p>
-          <span class="ladder__tag">Dominada limpia</span>
-        </div>
-        <div class="ladder__row">
-          <strong>Flexión</strong>
-          <p>Pared → rodillas → completa → archer</p>
-          <span class="ladder__tag">Flexión profunda</span>
-        </div>
-        <div class="ladder__row">
-          <strong>Fondos</strong>
-          <p>Banco → paralelas → lastrados → anillas</p>
-          <span class="ladder__tag">Ring dips</span>
-        </div>
-        <div class="ladder__row">
-          <strong>Sentadilla</strong>
-          <p>Sentadilla → pistola asistida → pistola</p>
-          <span class="ladder__tag">Pistol squat</span>
-        </div>
-        <div class="ladder__row">
-          <strong>Core</strong>
-          <p>Plancha → hollow → L-sit → dragon flag</p>
-          <span class="ladder__tag">Dragon flag</span>
-        </div>
-        <div class="ladder__row">
-          <strong>Pino</strong>
-          <p>Pino en pared → libre → press handstand</p>
-          <span class="ladder__tag">Handstand libre</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="toast" id="toast"></div>
 
-  <!-- Historias / testimonios -->
-  <section class="section section--alt" id="testimonios">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag">Historias</span>
-        <h2>Almas que ya están en movimiento</h2>
-      </div>
-      <div class="grid grid--3">
-        <figure class="card testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <blockquote>"En 4 meses logré mi primera dominada. Pensé que nunca lo conseguiría y hoy hago series de 8."</blockquote>
-          <figcaption>
-            <strong>María G.</strong>
-            <span>Empezó desde cero · 6 meses</span>
-          </figcaption>
-        </figure>
-        <figure class="card testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <blockquote>"Sin gimnasio y en mi casa. Las progresiones claras hicieron todo el trabajo más fácil de seguir."</blockquote>
-          <figcaption>
-            <strong>Carlos R.</strong>
-            <span>Objetivo: dominada y pino</span>
-          </figcaption>
-        </figure>
-        <figure class="card testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <blockquote>"Lo que más valoro es la técnica: aprendí a entrenar sin dolor y viendo resultados reales cada semana."</blockquote>
-          <figcaption>
-            <strong>Lucía F.</strong>
-            <span>De flexiones a anillas</span>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+<script>
+    /* =========================================================
+       PRODUCTOS · Edita nombres, características y precios aquí
+       (archivo: index.html en la carpeta de imágenes)
+    ========================================================= */
+    const PRODUCTS = [
+        {
+            id: 1,
+            name: "Escritorio Esquinero Rosa Estilo Nórdico",
+            cat: "Escritorios y Tocadores",
+            img: "-1302409651.png",
+            badge: "Nuevo",
+            specs: [
+                "Diseño en L con patas estilo 'waterfall', aprovecha la esquina",
+                "Pintura rosa mate resistente a rayones",
+                "Compacto, ideal para rincones, estudio o maquillaje",
+                "Montaje fácil con herrajes incluidos"
+            ],
+            price: 95.00
+        },
+        {
+            id: 2,
+            name: "Mesa Mostrador Boutique Blanca",
+            cat: "Exhibidores Comerciales",
+            img: "-1560879497.png",
+            badge: "Pro",
+            specs: [
+                "Mesa isla para exhibir joyería y accesorios",
+                "Superficie amplia y estable de acabado blanco",
+                "Para tiendas, boutiques, joyerías y ferias",
+                "Estructura reforzada de perfil metálico"
+            ],
+            price: 185.00
+        },
+        {
+            id: 3,
+            name: "Tocador Vanity Rosa con Cajones",
+            cat: "Escritorios y Tocadores",
+            img: "1891130306.png",
+            badge: "Favorito",
+            specs: [
+                "2 cajones corredizos con tiradores",
+                "Tablero amplio para organizadores y maquillaje",
+                "Patas elevadas, estilo moderno y minimalista",
+                "Perfecto para dormitorio y área de maquillaje"
+            ],
+            price: 115.00
+        },
+        {
+            id: 4,
+            name: "Carrito Organizador Cricut (Tamaño ajustable)",
+            cat: "Muebles para Manualidades",
+            img: "611KzU+gZPL._AC_UF894,1000_QL80_FMwebp_.webp",
+            badge: "Compatible",
+            specs: [
+                "Compatible con todas las máquinas Cricut",
+                "Tablero superior: 23,6\" × 14,2\"",
+                "Estantes: 21,7\" y 12,6\" · fondo 13,4\"",
+                "Compartimento lateral para rollos de vinilo"
+            ],
+            price: 98.00
+        },
+        {
+            id: 5,
+            name: "Estación Cricut Todo en Uno (All in One)",
+            cat: "Muebles para Manualidades",
+            img: "712ezU8IJxL._AC_UF894,1000_QL80_FMwebp_.webp",
+            gallery: ["712ezU8IJxL._AC_UF894,1000_QL80_FMwebp_.webp", "714NZU2hXDL._AC_UF894,1000_QL80_FMwebp_.webp"],
+            badge: "All in One",
+            specs: [
+                "Cajón, estantes y espacio para máquina y prensa térmica",
+                "Almacena rollos de vinilo y HTV de hasta 8'",
+                "Ruedas giratorias para moverlo con facilidad",
+                "Organiza herramientas y accesorios de la Cricut"
+            ],
+            price: 155.00
+        },
+        {
+            id: 6,
+            name: "Cuna de Pino Natural (New Zealand Pinewood)",
+            cat: "Cunas Infantiles",
+            img: "81XqcsgYnVL._AC_UF894,1000_QL80_FMwebp_.webp",
+            gallery: ["81XqcsgYnVL._AC_UF894,1000_QL80_FMwebp_.webp", "716HQd-AgwL._AC_UF894,1000_QL80_FMwebp_.webp"],
+            badge: "Calidad Premium",
+            specs: [
+                "Fabricada en pino sostenible de Nueva Zelanda",
+                "Medidas: 40\" largo × 25\" fondo × 36\" alto",
+                "Listones de seguridad separados, apta para recién nacidos",
+                "Acabado natural sin astillas, dura por generaciones"
+            ],
+            price: 240.00
+        },
+        {
+            id: 7,
+            name: "Cuna Arqueada Gris con Molduras",
+            cat: "Cunas Infantiles",
+            img: "718biSQAOCL._AC_UF894,1000_QL80_FMwebp_.webp",
+            badge: "Clásica",
+            specs: [
+                "Cabecero y píe arqueados con molduras decorativas",
+                "Acabado gris pintado, resistente y elegante",
+                "Altura regulable y barandillas seguras",
+                "Combina con cualquier decoración de cuarto"
+            ],
+            price: 215.00
+        },
+        {
+            id: 8,
+            name: "Juego de 3 Repisas Infantiles Blancas",
+            cat: "Repisas de Pared",
+            img: "81be4mdoOaL._AC_UF894,1000_QL80_FMwebp_.webp",
+            badge: "Set x3",
+            specs: [
+                "Set de 3 estantes blancos con baranda",
+                "Ganchos integrados para ropa y accesorios",
+                "Perfectos para libros, juguetes y decoración",
+                "Ideales para cuartos infantiles y guarderías"
+            ],
+            price: 75.00
+        }
+    ];
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container container--narrow">
-      <div class="section__head">
-        <span class="section__tag">FAQ</span>
-        <h2>Preguntas frecuentes</h2>
-      </div>
-      <div class="faq">
-        <details class="faq__item">
-          <summary>¿Necesito material o ir al gimnasio?</summary>
-          <p>No. Trabajamos con tu peso corporal. Una barra de dominadas (o un lugar donde colgarte) es opcional y recomendable cuando llegue el momento.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Nunca he entrenado. ¿Puedo empezar?</summary>
-          <p>Claro. Empezamos desde tu nivel real con regresiones seguras. Si puedes caminar, puedes entrenar; adaptamos cada ejercicio.</p>
-        </details>
-        <details class="faq__item">
-          <summary>¿Es realmente gratis?</summary>
-          <p>Sí. El plan base es 100% gratuito y sin permanencia: calentamiento, rutina diaria, progresiones y registro de avances.</p>
-        </details>
-        <details class="faq__item">
-          <summary>¿Cuánto tardo en ver resultados?</summary>
-          <p>Con constancia (3 días a la semana) notas fuerza y control en 4–6 semanas. Tu primera dominada suele llegar entre los 3 y 6 meses.</p>
-        </details>
-        <details class="faq__item">
-          <summary>¿Y si tengo dolor o molestias?</summary>
-          <p>El dolor agudo no se entrena: se escucha. Ajustamos el plan o buscamos variantes, y ante molestias persistentes consulta a un profesional.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+    const REVIEWS = [
+        { name: "María González", who: "Maracaibo", stars: 5, text: "Compré la cuna de pino y es hermosa, súper firme y llegó muy bien embalada. Mi bebé duerme feliz. ¡Recomendadísimos!" },
+        { name: "Carlos Rodríguez", who: "Ciudad Ojeda", stars: 5, text: "Excelente atención por WhatsApp. Me armaron la estación para mi Cricut y me ahorré bastante. Calidad y precio increíbles." },
+        { name: "Ana Lucía Pérez", who: "Cabimas", stars: 5, text: "El tocador rosa quedó precioso en mi cuarto. Muy buena madera y acabado. La entrega fue rápida y puntual." },
+        { name: "Jesús Mendoza", who: "Maracaibo", stars: 4, text: "Las repisas infantiles son tal cual la foto, muy resistentes. Tuve una duda y me respondieron al instante. Volveré a comprar." },
+        { name: "Gabriela Torres", who: "Ciudad Ojeda", stars: 5, text: "La mesa boutique quedó perfecta para mi emprendimiento de bisutería. Se ve profesional y de muy buen material." },
+        { name: "Luis Fernández", who: "Lagunillas", stars: 5, text: "Producto de calidad, precios justos y comunicación rápida. El escritorio esquinero le encantó a mi hija. ¡Gracias!" }
+    ];
 
-  <!-- CTA final -->
-  <section class="section cta" id="entrena">
-    <div class="container cta__box">
-      <span class="badge">🔥 Hoy es un buen día</span>
-      <h2>Tu cuerpo ya está listo.<br />Solo falta <span class="gradient-text">empezar</span>.</h2>
-      <p>Déjanos tu correo y recibe cada mañana tu plan del día, gratis.</p>
-      <form class="cta__form" id="ctaForm">
-        <input type="email" placeholder="tu@email.com" required />
-        <button type="submit" class="btn btn--primary btn--lg">Quiero mi plan</button>
-      </form>
-      <p class="cta__note" id="ctaNote"></p>
-    </div>
-  </section>
+    let cart = [];
+    let selectedPay = "Tarjeta de crédito/débito";
+    const PHONE_INTL = "584146503348";   // 0414 650 3348
+    const PHONE_DISPLAY = "0414-650-3348";
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#" class="navbar__logo">Almas<span>en</span>Movimiento</a>
-        <p>Hecho con 💛 para los que entrenan con el alma.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Entrena</h4>
-        <a href="#metodo">Método</a>
-        <a href="#plan">Plan semanal</a>
-        <a href="#plan-hoy">Plan del día</a>
-        <a href="#progresiones">Progresiones</a>
-      </div>
-      <div class="footer__col">
-        <h4>Comunidad</h4>
-        <a href="#testimonios">Historias</a>
-        <a href="#faq">FAQ</a>
-        <a href="#entrena">Empezar</a>
-      </div>
-      <div class="footer__col">
-        <h4>Legal</h4>
-        <a href="#">Privacidad</a>
-        <a href="#">Términos</a>
-        <a href="#">Aviso de salud</a>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>© 2026 Almas en Movimiento. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    /* ---------- Placeholder image ---------- */
+    function placeholder(text) {
+        const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>
+            <rect width='100%' height='100%' fill='#e9dccb'/>
+            <g fill='none' stroke='#c9b08f' stroke-width='6'>
+                <rect x='200' y='180' width='400' height='240' rx='16'/>
+                <line x1='200' y1='300' x2='600' y2='300'/>
+                <line x1='200' y1='215' x2='600' y2='215'/>
+            </g>
+            <text x='400' y='370' font-family='Segoe UI,sans-serif' font-size='34' fill='#7a5230' text-anchor='middle' font-weight='bold'>${text}</text>
+            <text x='400' y='420' font-family='Segoe UI,sans-serif' font-size='20' fill='#ab9274' text-anchor='middle'>Guacalitos Ojeda</text>
+        </svg>`;
+        return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+    }
 
-  <script src="script.js"></script>
+    /* ---------- Render products ---------- */
+    function renderProducts() {
+        const grid = document.getElementById('product-list');
+        grid.innerHTML = PRODUCTS.map(p => {
+            const imgs = p.gallery || [p.img];
+            const thumbs = imgs.length > 1 ? `
+                <div class="thumbs">${imgs.map((u, i) => `<img class="thumb${i===0?' active':''}" src="${u}" onclick="setMainImg('${p.img}','${u}',this,${i})" onerror="this.onerror=null;this.src=placeholder('${p.name}')">`).join('')}</div>` : '';
+            return `
+            <div class="card">
+                <div class="card-img">
+                    <span class="badge">${p.badge}</span>
+                    <img class="main" src="${p.img}" onerror="this.onerror=null;this.src=placeholder('${p.name}')" alt="${p.name}">
+                </div>
+                <div class="card-body">
+                    <h4>${p.name}</h4>
+                    <div class="card-cat">${p.cat}</div>
+                    <ul class="specs">${p.specs.map(s => `<li>${s}</li>`).join('')}</ul>
+                    <div class="card-price-row">
+                        <div>
+                            <div class="price">$${p.price.toFixed(2)}<small> USD</small></div>
+                            <div class="price-note">Precio de referencia</div>
+                        </div>
+                    </div>
+                    ${thumbs}
+                    <div class="card-btns">
+                        <button class="btn btn-add" onclick="addToCart(${p.id})">🛒 Añadir</button>
+                        <button class="btn btn-card-wa" onclick="buyNowWhatsApp(${p.id})">💬 WhatsApp</button>
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    /* ---------- Render reviews ---------- */
+    function renderReviews() {
+        const el = document.getElementById('reviews-list');
+        el.innerHTML = REVIEWS.map(r => `
+            <div class="review">
+                <div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
+                <p>“${r.text}”</p>
+                <div class="who">
+                    <div class="av">${r.name.charAt(0)}</div>
+                    <div><b>${r.name}</b><span>${r.who}</span></div>
+                </div>
+            </div>`).join('');
+    }
+
+    function setMainImg(main, url, thumb, i) {
+        const card = thumb.closest('.card');
+        card.querySelector('.card-img .main').src = url;
+        card.querySelectorAll('.thumbs .thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+    }
+
+    /* ---------- Cart ---------- */
+    function addToCart(id) {
+        const p = PRODUCTS.find(x => x.id === id);
+        const ex = cart.find(x => x.id === id);
+        if (ex) ex.qty++; else cart.push({ ...p, qty: 1 });
+        updateCount();
+        toast('🛒 "' + p.name + '" añadido al carrito', true);
+    }
+    function updateCount() {
+        const n = cart.reduce((a, c) => a + c.qty, 0);
+        document.getElementById('cart-count').innerText = n;
+    }
+    function cartTotal() { return cart.reduce((a, c) => a + c.price * c.qty, 0); }
+
+    /* ---------- Modal control ---------- */
+    function openCart() {
+        if (cart.length === 0) { toast('Tu carrito está vacío. ¡Añade un mueble!', false); return; }
+        document.getElementById('cart-overlay').classList.add('show');
+        showStep('step-review');
+        renderCartMini();
+    }
+    function closeAll() {
+        document.getElementById('cart-overlay').classList.remove('show');
+        document.getElementById('step-review').style.display = '';
+        document.getElementById('step-checkout').style.display = 'none';
+        document.getElementById('step-success').style.display = 'none';
+    }
+    function showStep(id) {
+        ['step-review','step-checkout','step-success'].forEach(s => document.getElementById(s).style.display = (s === id ? 'block' : 'none'));
+    }
+    function renderCartMini() {
+        const el = document.getElementById('cart-mini');
+        el.innerHTML = cart.map(c => `<div class="mini-row"><span>${c.name} × ${c.qty}</span><b>$${(c.price * c.qty).toFixed(2)}</b></div>`).join('')
+            + `<div class="mini-total"><span>Total</span><span>$<span id="total-review">${cartTotal().toFixed(2)}</span></span></div>`;
+        document.getElementById('total-review').innerText = cartTotal().toFixed(2);
+    }
+    function selectPay(el) {
+        document.querySelectorAll('.pay-opt').forEach(o => o.classList.remove('active'));
+        el.classList.add('active');
+        selectedPay = el.dataset.pay;
+    }
+
+    /* ---------- Checkout (gateway) ---------- */
+    function goCheckout() {
+        showStep('step-checkout');
+        document.getElementById('c-method').value = selectedPay;
+        document.getElementById('total-checkout').innerText = cartTotal().toFixed(2);
+    }
+    function processCard() {
+        const name = document.getElementById('c-name').value.trim();
+        const phone = document.getElementById('c-phone').value.trim();
+        const addr = document.getElementById('c-address').value.trim();
+        if (!name) { toast('Por favor ingresa tu nombre', false); return; }
+        if (!phone) { toast('Por favor ingresa tu teléfono', false); return; }
+
+        const btn = document.getElementById('process-btn');
+        btn.innerHTML = '<span class="spinner"></span> Procesando…';
+        btn.disabled = true;
+
+        // Aquí puedes conectar tu pasarela real (Stripe / PayPal / RedSys / Binance / Pago Móvil)
+        // reemplazando el setTimeout por tu llamada de cobro.
+        setTimeout(() => {
+            const total = cartTotal().toFixed(2);
+            const method = selectedPay;
+            document.getElementById('success-msg').innerText =
+                `Gracias ${name}. Tu pago de $${total} USD con ${method} fue aprobado. Te contactaremos al ${phone}.`;
+            document.getElementById('success-mini').innerHTML =
+                cart.map(c => `<div class="mini-row"><span>${c.name} × ${c.qty}</span><b>$${(c.price*c.qty).toFixed(2)}</b></div>`).join('')
+                + `<div class="mini-total"><span>Total pagado</span><span>$${total}</span></div>`;
+            cart = [];
+            updateCount();
+            showStep('step-success');
+            btn.innerHTML = '🔒 Confirmar pago · $' + total;
+            btn.disabled = false;
+        }, 1600);
+    }
+
+    /* ---------- WhatsApp ---------- */
+    function waLink(msg) {
+        return `https://wa.me/${PHONE_INTL}?text=${encodeURIComponent(msg)}`;
+    }
+    function openWhatsApp(text) { window.open(waLink(text), '_blank'); }
+
+    function orderMessage() {
+        const lines = cart.map(c => `• ${c.name} x${c.qty} — $${(c.price*c.qty).toFixed(2)}`).join('\n');
+        const total = cartTotal().toFixed(2);
+        return `Hola Guacalitos Ojeda 👋, quiero hacer un pedido de muebles:\n\n${lines}\n\n💰 Total: $${total} USD\n\nMétodo de pago: ${selectedPay}\nMándame los datos para coordinar la entrega. Gracias!`;
+    }
+    function payWhatsApp() {
+        if (cart.length === 0) { toast('Tu carrito está vacío', false); return; }
+        window.open(waLink(orderMessage()), '_blank');
+    }
+    function buyNowWhatsApp(id) {
+        const p = PRODUCTS.find(x => x.id === id);
+        const msg = `Hola Guacalitos Ojeda 👋, me interesa: ${p.name} — $${p.price.toFixed(2)} USD\n\n${p.specs.join('\n')}\n\n¿Está disponible? Gracias!`;
+        window.open(waLink(msg), '_blank');
+    }
+
+    /* ---------- Utils ---------- */
+    function scrollTo(sel) { document.querySelector(sel).scrollIntoView({ behavior: 'smooth' }); }
+    function toast(msg, green) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.className = 'toast' + (green ? ' green' : '');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2200);
+    }
+
+    renderProducts();
+    renderReviews();
+</script>
 </body>
 </html>
